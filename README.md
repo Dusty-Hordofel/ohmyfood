@@ -51,11 +51,108 @@ font-family: 'Roboto', sans-serif;
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
+$Ohmyfood-white: #ffffff;
+$Ohmyfood-primary-grey: #f7f7f7;
+$Ohmyfood-secondary-grey: #eaeaea;
+$Ohmyfood-shadow-1: 0 5px 15px rgba(0, 0, 0, 0.2);
+$Ohmyfood-shadow-2: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
+$Ohmyfood-shadow-3: 0 5px 15px rgba(0, 0, 0, 0.4);
+$transition: all 0.3s linear;
 $gradient: linear-gradient(
   180deg,
   rgba(255, 121, 218, 1) 0%,
   rgba(147, 86, 220, 1) 100%
 );
+
+// fontsize
+$Ohmyfood-fs-1: 1.6rem;
+$Ohmyfood-fs-2: 1.8rem;
+$Ohmyfood-fs-3: 2.4rem;
+
+//font weight
+$Ohmyfood-fw-400: 400;
+$Ohmyfood-fw-600: 600;
+$Ohmyfood-fw-700: 700;
+```
+
+- create mixins
+
+```scss
+@mixin flexbox-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button {
+  opacity: 1;
+  background: $gradient;
+  color: white;
+  border-radius: 200px;
+  box-shadow: $Ohmyfood-shadow-1;
+  font-size: $Ohmyfood-fs-1;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+@mixin button-hover {
+  opacity: 0.8;
+  transition: 0.3s;
+  box-shadow: $Ohmyfood-shadow-3;
+}
+```
+
+- add global styles
+
+```scss
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: $Ohmyfood-white;
+  font-size: $Ohmyfood-fs-1;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img,
+button,
+a {
+  display: block;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+span {
+  display: inline-block;
+}
+
+input {
+  display: block;
+  width: 100%;
+  font: inherit;
+}
 ```
 
 - use Font Awesome library

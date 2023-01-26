@@ -6,10 +6,10 @@
 /* CUSTOM PROPERTY*/
 /************************************/
 /************************************/
-/* Mixins */
+/* MIXINS */
 /************************************/
 /************************************/
-/* Global Styles */
+/* GLOBAL STYLES*/
 /************************************/
 *,
 *::before,
@@ -26,6 +26,8 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
+  background: #ffffff;
+  font-size: 1.6rem;
 }
 
 a {
@@ -43,6 +45,11 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+}
+
 span {
   display: inline-block;
 }
@@ -55,4 +62,7 @@ input {
 
 /************************************/
 /* HEADER */
+/************************************/
+/************************************/
+/* MAIN */
 /************************************//*# sourceMappingURL=styles.css.map */
