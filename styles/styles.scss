@@ -126,3 +126,41 @@ header {
 /************************************/
 /* MAIN */
 /************************************/
+main {
+  width: 37.5rem;
+
+  .location {
+    height: 4.9rem;
+    background: $Ohmyfood-secondary-grey;
+    @include flexbox-center();
+
+    &__icon {
+      width: 1.2rem;
+      height: 1.6rem;
+    }
+    &__city {
+      margin-left: 1.9rem; //à revoir en cas de changement d'écran
+    }
+  }
+
+  .hero {
+    height: 28.6rem;
+    background: $Ohmyfood-primary-grey;
+    padding: 38px;
+    &__container {
+      // padding: 38px;
+    }
+    &__title {
+      margin: 0 30px 22px 30px;
+    }
+
+    &__text {
+      // font-size: $Ohmyfood-fs-two;
+      margin-bottom: 34px;
+    }
+    &__button {
+      @include button();
+    }
+    // @include flexbox-center();
+  }
+}
