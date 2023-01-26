@@ -237,18 +237,50 @@ main {
 }
 ```
 
+- create a [Location](https://github.com/Dusty-Hordofel/ohmyfood/pull/3) pull request
+
+## Section 4. Main Section
+
 ### 5.
 
-- add [header](./index.html)
+- add [Hero](./index.html)
 
 ```html
-
+<!-- Hero  section-->
+<section class="hero">
+  <div class="hero__container">
+    <h1 class="hero__title">Réserver le menu qui vous convient</h1>
+    <p class="hero__text">
+      Découvrez des restaurants d'exception, sélectionnés par nos soins.
+    </p>
+    <button class="hero__button">Explorer nos restaurants</button>
+  </div>
+</section>
+<!-- end of Hero  section-->
 ```
 
-- style [](./styles/styles.scss)
+- style [Hero](./styles/styles.scss)
 
 ```scss
+.hero {
+  height: 28.6rem;
+  background: $Ohmyfood-primary-grey;
+  padding: 38px;
+  &__container {
+    // padding: 38px;
+  }
+  &__title {
+    margin: 0 30px 22px 30px;
+  }
 
+  &__text {
+    // font-size: $Ohmyfood-fs-two;
+    margin-bottom: 34px;
+  }
+  &__button {
+    @include button();
+  }
+}
 ```
 
 ### 6.
@@ -302,8 +334,6 @@ main {
 ### 20.
 
 ---
-
-## Section 4.
 
 ## Section 5.
 
