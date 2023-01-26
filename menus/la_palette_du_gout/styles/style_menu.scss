@@ -1,0 +1,189 @@
+/************************************/
+/* GOOGLE FONTS */
+/************************************/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+
+/************************************/
+/* CUSTOM PROPERTY*/
+/************************************/
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
+$Ohmyfood-white: #ffffff;
+$Ohmyfood-black: #000000;
+
+$Ohmyfood-primary-grey: #f7f7f7;
+$Ohmyfood-secondary-grey: #eaeaea;
+$Ohmyfood-shadow-1: 0 5px 15px rgba(0, 0, 0, 0.2);
+$Ohmyfood-shadow-2: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
+$Ohmyfood-shadow-3: 0 5px 15px rgba(0, 0, 0, 0.4);
+$transition: all 0.3s linear;
+$gradient: linear-gradient(
+  180deg,
+  rgba(255, 121, 218, 1) 0%,
+  rgba(147, 86, 220, 1) 100%
+);
+
+// fontsize
+$Ohmyfood-fs-1: 1.6rem;
+$Ohmyfood-fs-2: 1.8rem;
+$Ohmyfood-fs-3: 2.4rem;
+
+//font weight
+$Ohmyfood-fw-400: 400;
+$Ohmyfood-fw-600: 600;
+$Ohmyfood-fw-700: 700;
+
+/************************************/
+/* MIXINS */
+/************************************/
+@mixin flexbox-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button($padding, $gradient, $border-radius) {
+  opacity: 1;
+  color: white;
+  background: $gradient;
+  border-radius: $border-radius;
+  box-shadow: $Ohmyfood-shadow-1;
+  font-size: $Ohmyfood-fs-1;
+  padding: $padding;
+  margin: 0 auto;
+}
+
+@mixin button-hover {
+  opacity: 0.8;
+  transition: 0.3s;
+  box-shadow: $Ohmyfood-shadow-3;
+}
+
+/************************************/
+/* GLOBAL STYLES*/
+/************************************/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: $Ohmyfood-white;
+  font-size: $Ohmyfood-fs-1;
+  color: $Ohmyfood-black;
+}
+
+a {
+  text-decoration: none;
+  color: $Ohmyfood-black;
+}
+
+li {
+  list-style: none;
+}
+
+img,
+button,
+a {
+  display: block;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+span {
+  display: inline-block;
+}
+
+input {
+  display: block;
+  width: 100%;
+  font: inherit;
+}
+
+/************************************/
+/* HEADER */
+/************************************/
+header {
+  background: #9356dc;
+  //   @include flexbox-center();
+
+  .header {
+    width: 37.5rem;
+    height: 6.4rem;
+    box-shadow: $Ohmyfood-shadow-2;
+    background: #99e2d0;
+
+    &__icon {
+      //   background: yellow;
+      font-size: 20px;
+    }
+
+    &__links {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background: #9356dc;
+      height: 100%;
+    }
+
+    &__logo {
+      display: block;
+      //   background: #ff79da;
+      img {
+        width: 165px;
+      }
+    }
+  }
+}
+
+.receipe__image {
+  width: 37.5rem;
+  background: #99e2d0;
+
+  &__image {
+    max-width: 100%;
+    height: 500px;
+  }
+}
+.main__receipe__container {
+  position: relative;
+  background: #000000;
+}
+.main__receipe {
+  position: absolute;
+  top: -35px;
+  width: 37.5rem;
+  padding-top: 4.2rem;
+  background: #99e2d0;
+  border-radius: 20px 20px 0 0;
+  z-index: 1;
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    h1 {
+      font-family: "Shrikhand", cursive;
+    }
+  }
+
+  &__icon {
+    font-size: 20px;
+  }
+}

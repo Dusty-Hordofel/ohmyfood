@@ -1,0 +1,128 @@
+/************************************/
+/* GOOGLE FONTS */
+/************************************/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/************************************/
+/* CUSTOM PROPERTY*/
+/************************************/
+/************************************/
+/* MIXINS */
+/************************************/
+/************************************/
+/* GLOBAL STYLES*/
+/************************************/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #ffffff;
+  font-size: 1.6rem;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+li {
+  list-style: none;
+}
+
+img,
+button,
+a {
+  display: block;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+span {
+  display: inline-block;
+}
+
+input {
+  display: block;
+  width: 100%;
+  font: inherit;
+}
+
+/************************************/
+/* HEADER */
+/************************************/
+header {
+  background: #9356dc;
+}
+header .header {
+  width: 37.5rem;
+  height: 6.4rem;
+  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
+  background: #99e2d0;
+}
+header .header__icon {
+  font-size: 20px;
+}
+header .header__links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #9356dc;
+  height: 100%;
+}
+header .header__logo {
+  display: block;
+}
+header .header__logo img {
+  width: 165px;
+}
+
+.receipe__image {
+  width: 37.5rem;
+  background: #99e2d0;
+}
+.receipe__image__image {
+  max-width: 100%;
+  height: 500px;
+}
+
+.main__receipe__container {
+  position: relative;
+  background: #000000;
+}
+
+.main__receipe {
+  position: absolute;
+  top: -35px;
+  width: 37.5rem;
+  padding-top: 4.2rem;
+  background: #99e2d0;
+  border-radius: 20px 20px 0 0;
+  z-index: 1;
+}
+.main__receipe__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.main__receipe__title h1 {
+  font-family: "Shrikhand", cursive;
+}
+.main__receipe__icon {
+  font-size: 20px;
+}/*# sourceMappingURL=style_menu.css.map */

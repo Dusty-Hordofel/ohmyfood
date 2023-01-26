@@ -602,7 +602,132 @@ footer {
 }
 ```
 
-### 9.
+## Section 5. La palette du gout
+
+### 9. header
+
+- add [header](./menus/la_palette_du_gout/la_palette_du_gout.html)
+
+```html
+<!-- Logo -->
+<header class="header__container">
+  <div class="header">
+    <ul class="header__links">
+      <li class="header__link">
+        <a href="#">
+          <i class="fa-solid fa-arrow-left-long header__icon"></i>
+        </a>
+      </li>
+      <li class="header__link">
+        <a href="index.html" class="header__logo">
+          <img
+            src="../../images/logo/ohmyfood@2x.svg"
+            alt=""
+            class="header__logo__image"
+          />
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+<!-- end of Logo -->
+
+<!-- Receipe section  -->
+<div class="receipe__image">
+  <img
+    src="../../images/restaurants/restaurant1.jpg"
+    alt=""
+    class="receipe__image"
+  />
+</div>
+<main>
+  <!-- end of receipe section  -->
+  <div class="main__receipe__container">
+    <div class="main__receipe">
+      <div class="main__receipe__title">
+        <h1>La palette du goût</h1>
+        <i class="fa-regular fa-heart main__receipe__icon"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero  -->
+
+  <!-- end of Hero -->
+</main>
+```
+
+-style [header](./menus/la_palette_du_gout/styles/style_menu.scss)
+
+```scss
+header {
+  background: #9356dc;
+  //   @include flexbox-center();
+
+  .header {
+    width: 37.5rem;
+    height: 6.4rem;
+    box-shadow: $Ohmyfood-shadow-2;
+    background: #99e2d0;
+
+    &__icon {
+      //   background: yellow;
+      font-size: 20px;
+    }
+
+    &__links {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background: #9356dc;
+      height: 100%;
+    }
+
+    &__logo {
+      display: block;
+      //   background: #ff79da;
+      img {
+        width: 165px;
+      }
+    }
+  }
+}
+
+.receipe__image {
+  width: 37.5rem;
+  background: #99e2d0;
+
+  &__image {
+    max-width: 100%;
+    height: 500px;
+  }
+}
+.main__receipe__container {
+  position: relative;
+  background: #000000;
+}
+.main__receipe {
+  position: absolute;
+  top: -35px;
+  width: 37.5rem;
+  padding-top: 4.2rem;
+  background: #99e2d0;
+  border-radius: 20px 20px 0 0;
+  z-index: 1;
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    h1 {
+      font-family: "Shrikhand", cursive;
+    }
+  }
+
+  &__icon {
+    font-size: 20px;
+  }
+}
+```
 
 ### 10.
 
@@ -627,8 +752,6 @@ footer {
 ### 20.
 
 ---
-
-## Section 5.
 
 ## Section 6.
 
