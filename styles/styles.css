@@ -1,0 +1,68 @@
+/************************************/
+/* GOOGLE FONTS */
+/************************************/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap");
+/************************************/
+/* CUSTOM PROPERTY*/
+/************************************/
+/************************************/
+/* MIXINS */
+/************************************/
+/************************************/
+/* GLOBAL STYLES*/
+/************************************/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #ffffff;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img,
+button,
+a {
+  display: block;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+span {
+  display: inline-block;
+}
+
+input {
+  display: block;
+  width: 100%;
+  font: inherit;
+}
+
+/************************************/
+/* HEADER */
+/************************************/
+/************************************/
+/* MAIN */
+/************************************//*# sourceMappingURL=styles.css.map */
