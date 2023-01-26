@@ -32,7 +32,7 @@ Ohmyfood! is a young startup that would like to impose itself on the restaurant 
 
 ---
 
-### 2. CSS and Fonts
+### 2. CSS styles
 
 - compile sass folders and link css files with [index.html](index.html)
 - import Roboto from Google Fonts in [main.scss](./sass/main.scss).
@@ -163,4 +163,84 @@ input {
 
 - add [Ohmyfood! favicon](./images/logo/favico/ohmyfoodfavicon.png)
 
+- [create a pull request]()
+
 ---
+
+## Section 2. Header
+
+### 3.
+
+### 4.
+
+### 5.
+
+### 6.
+
+### 7.
+
+### 8.
+
+### 9.
+
+### 10.
+
+### 11.
+
+### 12.
+
+### 13.
+
+### 14.
+
+### 15.
+
+### 16.
+
+### 17.
+
+### 18.
+
+### 19.
+
+### 20.
+
+---
+
+## Section 3.
+
+## Section 3.
+
+## Section 4.
+
+## Section 5.
+
+## Section 6.
+
+## Section 7.
+
+## Section 8.
+
+## Section 9.
+
+## Section 10.
+
+## Section 11.
+
+## Section 12.
+
+## Section 13.
+
+## Section 14.
+
+## Section 15.
+
+## Section 16.
+
+## Section 17.
+
+## Section 18.
+
+## Section 19.
+
+## Section 20.
