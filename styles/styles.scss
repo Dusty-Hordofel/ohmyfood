@@ -115,6 +115,13 @@ input {
 /************************************/
 /* HEADER */
 /************************************/
+header {
+  @include flexbox-center();
+  width: 37.5rem;
+  height: 6.4rem;
+  background: yellow;
+  box-shadow: $Ohmyfood-shadow-2;
+}
 
 /************************************/
 /* MAIN */

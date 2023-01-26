@@ -163,13 +163,37 @@ input {
 
 - add [Ohmyfood! favicon](./images/logo/favico/ohmyfoodfavicon.png)
 
-- [create a pull request]()
+- [create a pull request](https://github.com/Dusty-Hordofel/ohmyfood/pull/1)
 
 ---
 
 ## Section 2. Header
 
-### 3.
+### 3. Header section
+
+- add [header]() section
+
+```html
+<!-- Logo -->
+<header class="header">
+  <a href="index.html">
+    <img src="./images/logo/ohmyfood@2x.svg" alt="" class="header__logo" />
+  </a>
+</header>
+<!-- end of Logo -->
+```
+
+- style [Header](./index.html) section
+
+```scss
+header {
+  @include flexbox-center();
+  width: 37.5rem;
+  height: 6.4rem;
+  background: yellow;
+  box-shadow: $Ohmyfood-shadow-2;
+}
+```
 
 ### 4.
 
