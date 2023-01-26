@@ -449,10 +449,10 @@ main {
 <!-- end of Restaurant section -->
 ```
 
-- style [](./styles/styles.scss)
+- style [restaurants](./styles/styles.scss)
 
 ```scss
-/*----------constrol-section---------*/
+/*----------restaurants-section---------*/
 .restaurant__container {
   height: 1121px;
   background: #99e2d0;
@@ -512,6 +512,95 @@ main {
 ```
 
 ### 8. Footer
+
+- add [footer](./index.html)
+
+```html
+<!-- Footer -->
+    <footer class="footer__container">
+      <div class="footer">
+        <div class="footer__logo">
+          <a href="index.html">
+            <img src="./images/logo/ohmyfood@2x.svg" alt="" class="footer__logo_image" />
+          </a>
+        </div>
+        <ul class="footer__links">
+          <li class="footer__link">
+            <a href="#" class="footer__link__info">
+              <span>
+                <i class="fa-solid fa-utensils"></i>
+              </span>
+              <p>
+                Proposer un restaurant
+              </p>
+            </a>
+          </li>
+          <li class="footer__link">
+            <a href="#" class="footer__link__info">
+              <span>
+                <i class="fa-solid fa-handshake-angle"></i>
+              </span>
+              <p>
+                Devenir partenaire
+              </p>
+            </a>
+          </li>
+          <li class="footer__link">
+            <a href="#" class="footer__link__info"> Mentions légales</a>
+          </li>
+          <li class="footer__link">
+            <a href="#" class="footer__link__info"> Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </footer>
+```
+
+- style [footer](./styles/styles.scss)
+
+```scss
+/****************footer****************/
+footer {
+  max-width: 37.5rem;
+  height: 19.8rem;
+  background: #353535;
+  color: $Ohmyfood-white;
+
+  .footer {
+    padding: 31px 0px 31px 31px;
+    height: 100%;
+    &__logo {
+      margin-bottom: 25px;
+      width: 100px;
+      img {
+        width: 100px;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+          brightness(102%) contrast(102%);
+      }
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      height: 100%;
+    }
+
+    &__link {
+      &__info {
+        display: block;
+        color: $Ohmyfood-white;
+        display: flex;
+
+        p {
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}
+```
 
 ### 9.
 

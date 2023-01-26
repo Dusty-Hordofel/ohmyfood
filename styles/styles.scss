@@ -61,18 +61,6 @@ $Ohmyfood-fw-700: 700;
   box-shadow: $Ohmyfood-shadow-3;
 }
 
-// @mixin theme($theme: DarkGray) {
-//   background: $theme;
-//   box-shadow: 0 0 1px rgba($theme, .25);
-//   color: #fff;
-// }
-
-// .info {
-//   @include theme;
-// }
-// .alert {
-//   @include theme($theme: DarkRed);
-
 /************************************/
 /* GLOBAL STYLES*/
 /************************************/
@@ -99,6 +87,7 @@ body {
 
 a {
   text-decoration: none;
+  color: $Ohmyfood-black;
 }
 
 li {
@@ -134,7 +123,6 @@ header {
   @include flexbox-center();
   width: 37.5rem;
   height: 6.4rem;
-  background: yellow;
   box-shadow: $Ohmyfood-shadow-2;
 }
 
@@ -206,7 +194,7 @@ main {
         width: 32.5rem;
         height: 7.6rem;
         @include flexbox-center();
-        background: #99e2d0;
+        // background: #99e2d0;
         @include button(10px, $Ohmyfood-primary-grey, 20px);
         &:not(:nth-last-child(1)) {
           margin-bottom: 22px;
@@ -238,19 +226,17 @@ main {
   /*----------constrol-section---------*/
   .restaurant__container {
     height: 1121px;
-    background: #99e2d0;
+    // background: #99e2d0;
     margin-bottom: 65px;
 
     .restaurant {
       &__title {
         margin-left: 25px;
-        background: #ff79da;
         margin-bottom: 20px;
       }
 
       &__menus {
         display: grid;
-        background: #9356dc;
         justify-content: center;
         grid-column: 1fr;
         margin: 0 auto;
@@ -288,6 +274,47 @@ main {
               background: red;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+/****************footer****************/
+footer {
+  max-width: 37.5rem;
+  height: 19.8rem;
+  background: #353535;
+  color: $Ohmyfood-white;
+
+  .footer {
+    padding: 31px 0px 31px 31px;
+    height: 100%;
+    &__logo {
+      margin-bottom: 25px;
+      width: 100px;
+      img {
+        width: 100px;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+          brightness(102%) contrast(102%);
+      }
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      height: 100%;
+    }
+
+    &__link {
+      &__info {
+        display: block;
+        color: $Ohmyfood-white;
+        display: flex;
+
+        p {
+          margin-left: 12px;
         }
       }
     }
