@@ -375,17 +375,143 @@ main {
 }
 ```
 
-### 7.
+### 7. Restaurants
 
 - add [header](./index.html)
 
 ```html
-
+<!-- Restaurant section -->
+<section class="restaurant__container">
+  <div class="restaurant">
+    <div class="restaurant__title">
+      <h2>Restaurants</h2>
+    </div>
+    <ul class="restaurant__menus">
+      <li class="restaurant__menu">
+        <div class="restaurant__menu__image">
+          <img src="./images/restaurants/restaurant1.jpg" alt="" />
+        </div>
+        <div class="restaurant__menu__description">
+          <div class="restaurant__menu__description__text">
+            <h3>La palette du gout</h3>
+            <p>Ménilmontant</p>
+          </div>
+          <div class="restaurant__menu__description__container">
+            <i class="fas fa-heart restaurant__menu__description__icon"></i>
+          </div>
+        </div>
+      </li>
+      <li class="restaurant__menu">
+        <div class="restaurant__menu__image">
+          <img src="./images/restaurants/restaurant2.jpg" alt="" />
+        </div>
+        <div class="restaurant__menu__description">
+          <div class="restaurant__menu__description__text">
+            <h3>À la française</h3>
+            <p>Cité Rouge</p>
+          </div>
+          <div class="restaurant__menu__description__container">
+            <i class="fas fa-heart restaurant__menu__description__icon"></i>
+          </div>
+        </div>
+      </li>
+      <li class="restaurant__menu">
+        <div class="restaurant__menu__image">
+          <img src="./images/restaurants/restaurant3.jpg" alt="" />
+        </div>
+        <div class="restaurant__menu__description">
+          <div class="restaurant__menu__description__text">
+            <h3>Le délice des sens</h3>
+            <p>Folie-Méricourt</p>
+          </div>
+          <div class="restaurant__menu__description__container">
+            <i class="fas fa-heart restaurant__menu__description__icon"></i>
+          </div>
+        </div>
+      </li>
+      <li class="restaurant__menu">
+        <div class="restaurant__menu__image">
+          <img src="./images/restaurants/restaurant1.jpg" alt="" />
+        </div>
+        <div class="restaurant__menu__description">
+          <div class="restaurant__menu__description__text">
+            <h3>La palette du gout</h3>
+            <p>Ménilmontant</p>
+          </div>
+          <div class="restaurant__menu__description__container">
+            <i class="fas fa-heart restaurant__menu__description__icon"></i>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- end of Restaurant section -->
 ```
 
 - style [](./styles/styles.scss)
 
-### 8.
+```scss
+/*----------constrol-section---------*/
+.restaurant__container {
+  height: 1121px;
+  background: #99e2d0;
+  margin-bottom: 65px;
+
+  .restaurant {
+    &__title {
+      margin-left: 25px;
+      background: #ff79da;
+      margin-bottom: 20px;
+    }
+
+    &__menus {
+      display: grid;
+      background: #9356dc;
+      justify-content: center;
+      grid-column: 1fr;
+      margin: 0 auto;
+      gap: 20px;
+    }
+
+    &__menu {
+      width: 343px;
+      height: 253px;
+      background: $Ohmyfood-white;
+      border-radius: 20px;
+      box-shadow: $Ohmyfood-shadow-1;
+      &__image {
+        img {
+          height: 178px;
+          width: 343px;
+          object-fit: cover;
+          border-radius: 20px 20px 0 0;
+        }
+      }
+
+      &__description {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px;
+        height: 75px;
+        &__text {
+        }
+        &__icon {
+          font-size: 25px;
+
+          cursor: grab;
+          &:hover {
+            background: red;
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+### 8. Footer
 
 ### 9.
 

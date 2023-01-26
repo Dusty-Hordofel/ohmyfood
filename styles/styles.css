@@ -178,7 +178,50 @@ main .functioning__container .functioning__button__text {
   display: inline-block;
   color: #000000;
 }
-main .control {
-  height: 400px;
+main .restaurant__container {
+  height: 1121px;
   background: #99e2d0;
+  margin-bottom: 65px;
+}
+main .restaurant__container .restaurant__title {
+  margin-left: 25px;
+  background: #ff79da;
+  margin-bottom: 20px;
+}
+main .restaurant__container .restaurant__menus {
+  display: grid;
+  background: #9356dc;
+  justify-content: center;
+  grid-column: 1fr;
+  margin: 0 auto;
+  gap: 20px;
+}
+main .restaurant__container .restaurant__menu {
+  width: 343px;
+  height: 253px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+main .restaurant__container .restaurant__menu__image img {
+  height: 178px;
+  width: 343px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+main .restaurant__container .restaurant__menu__description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  height: 75px;
+}
+main .restaurant__container .restaurant__menu__description__icon {
+  font-size: 25px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+main .restaurant__container .restaurant__menu__description__icon:hover {
+  background: red;
 }/*# sourceMappingURL=styles.css.map */
