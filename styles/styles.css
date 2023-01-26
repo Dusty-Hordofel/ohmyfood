@@ -28,10 +28,12 @@ body {
   font-family: "Roboto", sans-serif;
   background: #ffffff;
   font-size: 1.6rem;
+  color: #000000;
 }
 
 a {
   text-decoration: none;
+  color: #000000;
 }
 
 li {
@@ -69,7 +71,6 @@ header {
   align-items: center;
   width: 37.5rem;
   height: 6.4rem;
-  background: yellow;
   box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -78,6 +79,10 @@ header {
 /************************************/
 main {
   width: 37.5rem;
+  /*----------loaction-section---------*/
+  /*----------hero-section---------*/
+  /*----------functionning-section---------*/
+  /*----------constrol-section---------*/
 }
 main .location {
   height: 4.9rem;
@@ -93,24 +98,160 @@ main .location__icon {
 main .location__city {
   margin-left: 1.9rem;
 }
-main .hero {
-  height: 28.6rem;
+main .hero__container {
   background: #f7f7f7;
-  padding: 38px;
+  padding-top: 42px;
+  height: 29rem;
+  display: flex;
+  justify-content: center;
 }
-main .hero__title {
-  margin: 0 30px 22px 30px;
+main .hero__container .hero {
+  max-width: 310px;
 }
-main .hero__text {
-  margin-bottom: 34px;
+main .hero__container .hero__title {
+  margin-bottom: 23px;
+  margin: 0 20px 0 20px;
 }
-main .hero__button {
+main .hero__container .hero__text {
+  margin: 23px 0 31px 0;
+}
+main .hero__container .hero__button {
   opacity: 1;
-  background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
   color: white;
-  border-radius: 200px;
+  background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  border-radius: 50px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   font-size: 1.6rem;
   padding: 20px;
   margin: 0 auto;
+  width: 221px;
+}
+main .functioning__container {
+  height: 37.1rem;
+}
+main .functioning__container .functioning__title {
+  color: #000000;
+  margin: 0px 0px 34px 25px;
+}
+main .functioning__container .functioning__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .functioning__container .functioning__button {
+  position: relative;
+  width: 32.5rem;
+  height: 7.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  color: white;
+  background: #f7f7f7;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  font-size: 1.6rem;
+  padding: 10px;
+  margin: 0 auto;
+}
+main .functioning__container .functioning__button:not(:nth-last-child(1)) {
+  margin-bottom: 22px;
+}
+main .functioning__container .functioning__button__number {
+  position: absolute;
+  left: -10px;
+  background: #9356dc;
+  border-radius: 50%;
+  margin-right: 2.2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .functioning__container .functioning__button__icon {
+  color: #9356dc;
+}
+main .functioning__container .functioning__button__text {
+  margin-left: 26px;
+  display: inline-block;
+  color: #000000;
+}
+main .restaurant__container {
+  height: 1121px;
+  margin-bottom: 65px;
+}
+main .restaurant__container .restaurant__title {
+  margin-left: 25px;
+  margin-bottom: 20px;
+}
+main .restaurant__container .restaurant__menus {
+  display: grid;
+  justify-content: center;
+  grid-column: 1fr;
+  margin: 0 auto;
+  gap: 20px;
+}
+main .restaurant__container .restaurant__menu {
+  width: 343px;
+  height: 253px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+main .restaurant__container .restaurant__menu__image img {
+  height: 178px;
+  width: 343px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+main .restaurant__container .restaurant__menu__description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  height: 75px;
+}
+main .restaurant__container .restaurant__menu__description__icon {
+  font-size: 25px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+main .restaurant__container .restaurant__menu__description__icon:hover {
+  background: red;
+}
+
+/****************footer****************/
+footer {
+  max-width: 37.5rem;
+  height: 19.8rem;
+  background: #353535;
+  color: #ffffff;
+}
+footer .footer {
+  padding: 31px 0px 31px 31px;
+  height: 100%;
+}
+footer .footer__logo {
+  margin-bottom: 25px;
+  width: 100px;
+}
+footer .footer__logo img {
+  width: 100px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+footer .footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: 100%;
+}
+footer .footer__link__info {
+  display: block;
+  color: #ffffff;
+  display: flex;
+}
+footer .footer__link__info p {
+  margin-left: 12px;
 }/*# sourceMappingURL=styles.css.map */

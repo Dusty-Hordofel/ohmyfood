@@ -11,6 +11,8 @@ $primary-color: #9356dc;
 $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
 $Ohmyfood-white: #ffffff;
+$Ohmyfood-black: #000000;
+
 $Ohmyfood-primary-grey: #f7f7f7;
 $Ohmyfood-secondary-grey: #eaeaea;
 $Ohmyfood-shadow-1: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -42,14 +44,14 @@ $Ohmyfood-fw-700: 700;
   align-items: center;
 }
 
-@mixin button {
+@mixin button($padding, $gradient, $border-radius) {
   opacity: 1;
-  background: $gradient;
   color: white;
-  border-radius: 200px;
+  background: $gradient;
+  border-radius: $border-radius;
   box-shadow: $Ohmyfood-shadow-1;
   font-size: $Ohmyfood-fs-1;
-  padding: 20px;
+  padding: $padding;
   margin: 0 auto;
 }
 
@@ -80,10 +82,12 @@ body {
   font-family: "Roboto", sans-serif;
   background: $Ohmyfood-white;
   font-size: $Ohmyfood-fs-1;
+  color: $Ohmyfood-black;
 }
 
 a {
   text-decoration: none;
+  color: $Ohmyfood-black;
 }
 
 li {
@@ -119,7 +123,6 @@ header {
   @include flexbox-center();
   width: 37.5rem;
   height: 6.4rem;
-  background: yellow;
   box-shadow: $Ohmyfood-shadow-2;
 }
 
@@ -129,6 +132,7 @@ header {
 main {
   width: 37.5rem;
 
+  /*----------loaction-section---------*/
   .location {
     height: 4.9rem;
     background: $Ohmyfood-secondary-grey;
@@ -143,24 +147,176 @@ main {
     }
   }
 
-  .hero {
-    height: 28.6rem;
+  /*----------hero-section---------*/
+  .hero__container {
     background: $Ohmyfood-primary-grey;
-    padding: 38px;
-    &__container {
-      // padding: 38px;
+    padding-top: 42px;
+
+    height: 29rem;
+    display: flex;
+    justify-content: center;
+
+    .hero {
+      max-width: 310px;
+      &__title {
+        margin-bottom: 23px;
+        margin: 0 20px 0 20px;
+      }
+      &__text {
+        margin: 23px 0 31px 0;
+      }
+
+      &__button {
+        @include button(20px, $gradient, 50px);
+        width: 221px;
+      }
     }
-    &__title {
-      margin: 0 30px 22px 30px;
+  }
+
+  /*----------functionning-section---------*/
+  .functioning__container {
+    height: 37.1rem;
+
+    .functioning {
+      &__title {
+        color: $Ohmyfood-black;
+        margin: 0px 0px 34px 25px;
+      }
+
+      &__buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &__button {
+        position: relative;
+        width: 32.5rem;
+        height: 7.6rem;
+        @include flexbox-center();
+        // background: #99e2d0;
+        @include button(10px, $Ohmyfood-primary-grey, 20px);
+        &:not(:nth-last-child(1)) {
+          margin-bottom: 22px;
+        }
+
+        &__number {
+          position: absolute;
+          left: -10px;
+          background: $primary-color;
+          border-radius: 50%;
+          margin-right: 2.2rem;
+          width: 2.5rem;
+          height: 2.5rem;
+          @include flexbox-center();
+        }
+        &__icon {
+          color: $primary-color;
+        }
+
+        &__text {
+          margin-left: 26px;
+          display: inline-block;
+          color: $Ohmyfood-black;
+        }
+      }
+    }
+  }
+
+  /*----------constrol-section---------*/
+  .restaurant__container {
+    height: 1121px;
+    // background: #99e2d0;
+    margin-bottom: 65px;
+
+    .restaurant {
+      &__title {
+        margin-left: 25px;
+        margin-bottom: 20px;
+      }
+
+      &__menus {
+        display: grid;
+        justify-content: center;
+        grid-column: 1fr;
+        margin: 0 auto;
+        gap: 20px;
+      }
+
+      &__menu {
+        width: 343px;
+        height: 253px;
+        background: $Ohmyfood-white;
+        border-radius: 20px;
+        box-shadow: $Ohmyfood-shadow-1;
+        &__image {
+          img {
+            height: 178px;
+            width: 343px;
+            object-fit: cover;
+            border-radius: 20px 20px 0 0;
+          }
+        }
+
+        &__description {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 25px;
+          height: 75px;
+          &__text {
+          }
+          &__icon {
+            font-size: 25px;
+
+            cursor: grab;
+            &:hover {
+              background: red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/****************footer****************/
+footer {
+  max-width: 37.5rem;
+  height: 19.8rem;
+  background: #353535;
+  color: $Ohmyfood-white;
+
+  .footer {
+    padding: 31px 0px 31px 31px;
+    height: 100%;
+    &__logo {
+      margin-bottom: 25px;
+      width: 100px;
+      img {
+        width: 100px;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+          brightness(102%) contrast(102%);
+      }
     }
 
-    &__text {
-      // font-size: $Ohmyfood-fs-two;
-      margin-bottom: 34px;
+    &__links {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      height: 100%;
     }
-    &__button {
-      @include button();
+
+    &__link {
+      &__info {
+        display: block;
+        color: $Ohmyfood-white;
+        display: flex;
+
+        p {
+          margin-left: 12px;
+        }
+      }
     }
-    // @include flexbox-center();
   }
 }

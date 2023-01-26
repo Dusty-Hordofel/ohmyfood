@@ -237,45 +237,370 @@ main {
 }
 ```
 
-### 5.
+- create a [Location](https://github.com/Dusty-Hordofel/ohmyfood/pull/3) pull request
 
-- add [header](./index.html)
+## Section 4. Main Section
+
+### 5. Hero
+
+- add [Hero](./index.html)
 
 ```html
-
+<!-- Hero  section-->
+<section class="hero">
+  <div class="hero__container">
+    <h1 class="hero__title">Réserver le menu qui vous convient</h1>
+    <p class="hero__text">
+      Découvrez des restaurants d'exception, sélectionnés par nos soins.
+    </p>
+    <button class="hero__button">Explorer nos restaurants</button>
+  </div>
+</section>
+<!-- end of Hero  section-->
 ```
 
-- style [](./styles/styles.scss)
+- style [Hero](./styles/styles.scss)
 
 ```scss
+.hero {
+  height: 28.6rem;
+  background: $Ohmyfood-primary-grey;
+  padding: 38px;
+  &__title {
+    margin: 0 30px 22px 30px;
+  }
 
+  &__text {
+    margin-bottom: 34px;
+  }
+  &__button {
+    @include button();
+  }
+}
 ```
 
-### 6.
+### 6.Functioning
 
-- add [header](./index.html)
+- add [Functioning-section](./index.html)
 
 ```html
-
+<!-- Functioning section -->
+<section class="functioning__container">
+  <div class="functioning">
+    <div class="functioning__title">
+      <h2>Fonctionnement</h2>
+    </div>
+    <div class="functioning__buttons">
+      <button class="functioning__button">
+        <span class="functioning__button__number">1</span>
+        <i
+          class="fa-solid fa-mobile-screen-button functioning__button__icon"
+        ></i>
+        <p class="functioning__button__text">Choisissez un restaurant</p>
+      </button>
+      <button class="functioning__button">
+        <span class="functioning__button__number">2</span>
+        <i class="fa-solid fa-list functioning__button__icon"></i>
+        <p class="functioning__button__text">Choisissez un restaurant</p>
+      </button>
+      <button class="functioning__button">
+        <span class="functioning__button__number">3</span>
+        <i class="fa-solid fa-store functioning__button__icon"></i>
+        <p class="functioning__button__text">Choisissez un restaurant</p>
+      </button>
+    </div>
+  </div>
+</section>
+<!-- end of Functioning section -->
 ```
 
-- style [](./styles/styles.scss)
+- style [Functioning ](./styles/styles.scss)
 
 ```scss
+/*----------functionning-section---------*/
+.functioning__container {
+  // background: #ff79da;
+  // color: $Ohmyfood-black;
+  height: 37.1rem;
+  // height: 44.1rem;
+  // padding-bottom: 70px;
+  // margin-bottom: ;
 
+  .functioning {
+    &__title {
+      color: $Ohmyfood-black;
+      margin: 0px 0px 34px 25px;
+    }
+
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__button {
+      position: relative;
+      width: 32.5rem;
+      height: 7.6rem;
+      @include flexbox-center();
+      background: #99e2d0;
+      @include button(10px, $Ohmyfood-primary-grey, 20px);
+      &:not(:nth-last-child(1)) {
+        margin-bottom: 22px;
+      }
+      // margin-bottom: 22px;
+      // padding: 70px;
+      // @include button(20px, $Ohmyfood-primary-grey);
+      &__number {
+        position: absolute;
+        left: -10px;
+        background: $primary-color;
+        border-radius: 50%;
+        margin-right: 2.2rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        @include flexbox-center();
+      }
+      &__icon {
+        color: $primary-color;
+      }
+
+      &__text {
+        margin-left: 26px;
+        display: inline-block;
+        color: $Ohmyfood-black;
+      }
+    }
+  }
+}
 ```
 
-### 7.
+### 7. Restaurants
 
 - add [header](./index.html)
 
 ```html
-
+<!-- Restaurant section -->
+<section class="restaurant__container">
+  <div class="restaurant">
+    <div class="restaurant__title">
+      <h2>Restaurants</h2>
+    </div>
+    <ul class="restaurant__menus">
+      <li class="restaurant__menu">
+        <div class="restaurant__menu__image">
+          <img src="./images/restaurants/restaurant1.jpg" alt="" />
+        </div>
+        <div class="restaurant__menu__description">
+          <div class="restaurant__menu__description__text">
+            <h3>La palette du gout</h3>
+            <p>Ménilmontant</p>
+          </div>
+          <div class="restaurant__menu__description__container">
+            <i class="fas fa-heart restaurant__menu__description__icon"></i>
+          </div>
+        </div>
+      </li>
+      <li class="restaurant__menu">
+        <div class="restaurant__menu__image">
+          <img src="./images/restaurants/restaurant2.jpg" alt="" />
+        </div>
+        <div class="restaurant__menu__description">
+          <div class="restaurant__menu__description__text">
+            <h3>À la française</h3>
+            <p>Cité Rouge</p>
+          </div>
+          <div class="restaurant__menu__description__container">
+            <i class="fas fa-heart restaurant__menu__description__icon"></i>
+          </div>
+        </div>
+      </li>
+      <li class="restaurant__menu">
+        <div class="restaurant__menu__image">
+          <img src="./images/restaurants/restaurant3.jpg" alt="" />
+        </div>
+        <div class="restaurant__menu__description">
+          <div class="restaurant__menu__description__text">
+            <h3>Le délice des sens</h3>
+            <p>Folie-Méricourt</p>
+          </div>
+          <div class="restaurant__menu__description__container">
+            <i class="fas fa-heart restaurant__menu__description__icon"></i>
+          </div>
+        </div>
+      </li>
+      <li class="restaurant__menu">
+        <div class="restaurant__menu__image">
+          <img src="./images/restaurants/restaurant1.jpg" alt="" />
+        </div>
+        <div class="restaurant__menu__description">
+          <div class="restaurant__menu__description__text">
+            <h3>La palette du gout</h3>
+            <p>Ménilmontant</p>
+          </div>
+          <div class="restaurant__menu__description__container">
+            <i class="fas fa-heart restaurant__menu__description__icon"></i>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- end of Restaurant section -->
 ```
 
-- style [](./styles/styles.scss)
+- style [restaurants](./styles/styles.scss)
 
-### 8.
+```scss
+/*----------restaurants-section---------*/
+.restaurant__container {
+  height: 1121px;
+  background: #99e2d0;
+  margin-bottom: 65px;
+
+  .restaurant {
+    &__title {
+      margin-left: 25px;
+      background: #ff79da;
+      margin-bottom: 20px;
+    }
+
+    &__menus {
+      display: grid;
+      background: #9356dc;
+      justify-content: center;
+      grid-column: 1fr;
+      margin: 0 auto;
+      gap: 20px;
+    }
+
+    &__menu {
+      width: 343px;
+      height: 253px;
+      background: $Ohmyfood-white;
+      border-radius: 20px;
+      box-shadow: $Ohmyfood-shadow-1;
+      &__image {
+        img {
+          height: 178px;
+          width: 343px;
+          object-fit: cover;
+          border-radius: 20px 20px 0 0;
+        }
+      }
+
+      &__description {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px;
+        height: 75px;
+        &__text {
+        }
+        &__icon {
+          font-size: 25px;
+
+          cursor: grab;
+          &:hover {
+            background: red;
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+### 8. Footer
+
+- add [footer](./index.html)
+
+```html
+<!-- Footer -->
+    <footer class="footer__container">
+      <div class="footer">
+        <div class="footer__logo">
+          <a href="index.html">
+            <img src="./images/logo/ohmyfood@2x.svg" alt="" class="footer__logo_image" />
+          </a>
+        </div>
+        <ul class="footer__links">
+          <li class="footer__link">
+            <a href="#" class="footer__link__info">
+              <span>
+                <i class="fa-solid fa-utensils"></i>
+              </span>
+              <p>
+                Proposer un restaurant
+              </p>
+            </a>
+          </li>
+          <li class="footer__link">
+            <a href="#" class="footer__link__info">
+              <span>
+                <i class="fa-solid fa-handshake-angle"></i>
+              </span>
+              <p>
+                Devenir partenaire
+              </p>
+            </a>
+          </li>
+          <li class="footer__link">
+            <a href="#" class="footer__link__info"> Mentions légales</a>
+          </li>
+          <li class="footer__link">
+            <a href="#" class="footer__link__info"> Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </footer>
+```
+
+- style [footer](./styles/styles.scss)
+
+```scss
+/****************footer****************/
+footer {
+  max-width: 37.5rem;
+  height: 19.8rem;
+  background: #353535;
+  color: $Ohmyfood-white;
+
+  .footer {
+    padding: 31px 0px 31px 31px;
+    height: 100%;
+    &__logo {
+      margin-bottom: 25px;
+      width: 100px;
+      img {
+        width: 100px;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+          brightness(102%) contrast(102%);
+      }
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      height: 100%;
+    }
+
+    &__link {
+      &__info {
+        display: block;
+        color: $Ohmyfood-white;
+        display: flex;
+
+        p {
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}
+```
 
 ### 9.
 
@@ -302,8 +627,6 @@ main {
 ### 20.
 
 ---
-
-## Section 4.
 
 ## Section 5.
 
