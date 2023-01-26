@@ -171,7 +171,7 @@ input {
 
 ### 3. Header section
 
-- add [header]() section
+- add [header](./index.html)
 
 ```html
 <!-- Logo -->
@@ -183,7 +183,7 @@ input {
 <!-- end of Logo -->
 ```
 
-- style [Header](./index.html) section
+- style [Header](./styles/styles.scss)
 
 ```scss
 header {
@@ -195,13 +195,85 @@ header {
 }
 ```
 
-### 4.
+## Section 3. Location
+
+### 4. Location
+
+- add [Location](./index.html)
+
+```html
+<!-- Localisation -->
+<main class="main">
+  <!-- location -->
+  <div class="location">
+    <div class="location__icon">
+      <i class="fa-solid fa-location-dot"></i>
+    </div>
+    <div class="location__city">Paris, Belleville</div>
+  </div>
+  <!-- end of Location -->
+</main>
+```
+
+- style [Location](./styles/styles.scss)
+
+```scss
+main {
+  width: 37.5rem;
+
+  .location {
+    height: 4.9rem;
+    background: $Ohmyfood-secondary-grey;
+    @include flexbox-center();
+
+    &__icon {
+      width: 1.2rem;
+      height: 1.6rem;
+    }
+    &__city {
+      margin-left: 1.9rem; //à revoir en cas de changement d'écran
+    }
+  }
+}
+```
 
 ### 5.
 
+- add [header](./index.html)
+
+```html
+
+```
+
+- style [](./styles/styles.scss)
+
+```scss
+
+```
+
 ### 6.
 
+- add [header](./index.html)
+
+```html
+
+```
+
+- style [](./styles/styles.scss)
+
+```scss
+
+```
+
 ### 7.
+
+- add [header](./index.html)
+
+```html
+
+```
+
+- style [](./styles/styles.scss)
 
 ### 8.
 
@@ -230,10 +302,6 @@ header {
 ### 20.
 
 ---
-
-## Section 3.
-
-## Section 3.
 
 ## Section 4.
 
