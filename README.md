@@ -241,7 +241,7 @@ main {
 
 ## Section 4. Main Section
 
-### 5.
+### 5. Hero
 
 - add [Hero](./index.html)
 
@@ -266,15 +266,11 @@ main {
   height: 28.6rem;
   background: $Ohmyfood-primary-grey;
   padding: 38px;
-  &__container {
-    // padding: 38px;
-  }
   &__title {
     margin: 0 30px 22px 30px;
   }
 
   &__text {
-    // font-size: $Ohmyfood-fs-two;
     margin-bottom: 34px;
   }
   &__button {
@@ -283,18 +279,100 @@ main {
 }
 ```
 
-### 6.
+### 6.Functioning
 
-- add [header](./index.html)
+- add [Functioning-section](./index.html)
 
 ```html
-
+<!-- Functioning section -->
+<section class="functioning__container">
+  <div class="functioning">
+    <div class="functioning__title">
+      <h2>Fonctionnement</h2>
+    </div>
+    <div class="functioning__buttons">
+      <button class="functioning__button">
+        <span class="functioning__button__number">1</span>
+        <i
+          class="fa-solid fa-mobile-screen-button functioning__button__icon"
+        ></i>
+        <p class="functioning__button__text">Choisissez un restaurant</p>
+      </button>
+      <button class="functioning__button">
+        <span class="functioning__button__number">2</span>
+        <i class="fa-solid fa-list functioning__button__icon"></i>
+        <p class="functioning__button__text">Choisissez un restaurant</p>
+      </button>
+      <button class="functioning__button">
+        <span class="functioning__button__number">3</span>
+        <i class="fa-solid fa-store functioning__button__icon"></i>
+        <p class="functioning__button__text">Choisissez un restaurant</p>
+      </button>
+    </div>
+  </div>
+</section>
+<!-- end of Functioning section -->
 ```
 
-- style [](./styles/styles.scss)
+- style [Functioning ](./styles/styles.scss)
 
 ```scss
+/*----------functionning-section---------*/
+.functioning__container {
+  // background: #ff79da;
+  // color: $Ohmyfood-black;
+  height: 37.1rem;
+  // height: 44.1rem;
+  // padding-bottom: 70px;
+  // margin-bottom: ;
 
+  .functioning {
+    &__title {
+      color: $Ohmyfood-black;
+      margin: 0px 0px 34px 25px;
+    }
+
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__button {
+      position: relative;
+      width: 32.5rem;
+      height: 7.6rem;
+      @include flexbox-center();
+      background: #99e2d0;
+      @include button(10px, $Ohmyfood-primary-grey, 20px);
+      &:not(:nth-last-child(1)) {
+        margin-bottom: 22px;
+      }
+      // margin-bottom: 22px;
+      // padding: 70px;
+      // @include button(20px, $Ohmyfood-primary-grey);
+      &__number {
+        position: absolute;
+        left: -10px;
+        background: $primary-color;
+        border-radius: 50%;
+        margin-right: 2.2rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        @include flexbox-center();
+      }
+      &__icon {
+        color: $primary-color;
+      }
+
+      &__text {
+        margin-left: 26px;
+        display: inline-block;
+        color: $Ohmyfood-black;
+      }
+    }
+  }
+}
 ```
 
 ### 7.
