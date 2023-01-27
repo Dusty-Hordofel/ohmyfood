@@ -1,0 +1,309 @@
+
+/* moteur de recherche */
+.recherche{
+    width: 100%;
+    height: 337px;
+    position: relative;
+    margin: 0px auto;
+    text-align: center;
+    background-color: $couleur-bg;
+    @media screen and (min-width: 620px){
+        height: 280px;
+    } /* placeholder */
+    &--zone{ 
+        width: 100%;
+        height: 50px;
+        display: block;
+        margin: 0 auto;
+        border: none;
+        font-size: 0.95rem;
+        font-weight: 600;
+        box-shadow: inset 0px 2px 3px $ombre;
+        background-color: rgb(231, 231, 231);
+        color: $couleur-encre;
+        text-align: center;
+        &:focus{
+            background-color: $couleur-secondaire; 
+        }
+        &:focus ~ .recherche__archer .recherche__archer--fleche{
+            opacity: 0;
+        }
+    } /* titre du formulaire */
+    &__titre{
+        margin: 20px 15% 0 15%;
+    } /* texte pub formulaire */
+    &__texte{
+        margin: 10px 10% 0 10%;
+        font-size: 1.05rem;
+        font-weight: 300;
+    }
+} 
+
+/* menu des repas */
+.repas{
+    margin: 25px 0 0 0;
+    padding: 0;
+    background-color: $couleur-bg;
+    animation: flou 2s linear 0s forwards;
+    /* titre des zones de repas */
+    &__titre{
+        height: 30px;
+        min-width: 80px;
+        max-width: 200px;
+        position: relative;
+        left: 5%;
+        margin: 0;
+        padding: 40px 0 0 0;
+        font-size: 0.95rem;
+        font-weight: 400;
+        text-transform:uppercase;
+        @media screen and (min-width: $desktop){
+            width: 80vw; 
+            max-width: 80vw;
+            left: 10%;
+        } /* barre sous les titres */
+        &--barre{
+            width: 100%;
+            max-width: 100px;
+            height: 2.5px;
+            display: block;
+            margin-top: 5px;
+            background-color: $couleur-tertiaire;
+            transform-origin: 0% 50%;
+            transform: scaleX(0.5); 
+            @media screen and (min-width: $desktop){
+                width: 80vw;   
+                max-width: 80vw; 
+                transform: scaleX(1);       
+            }
+        }
+        &:hover .repas__titre--barre{
+            animation: détend 0.6s ease-out; 
+            @media screen and (min-width: $desktop){
+                animation: détend 0.3s linear; 
+            }
+        }
+    } /* zone des entrées */
+    &__entrée{
+        height: 250px;
+        min-height: 250px;
+        @extend %case;
+        @include margin;
+        @include pad;
+        opacity: 0; 
+        animation: flou 1.3s linear forwards; 
+        @media screen and (min-width: $desktop){
+            height: 85px;
+            min-height: unset;
+        } /* zone pour 4 choix */
+        &--quatrechoix{
+            height: 320px; 
+            @media screen and (min-width: $desktop){
+            height: 170px;
+            }
+        } /* type d'entrée */
+        &--choix{
+            @extend %choix;
+            @media screen and (min-width: $desktop){
+                width: 30vw;
+            }
+            &:nth-child(1){  
+                animation: colle 1.5s ease-in-out forwards;
+            }
+            &:nth-child(2){
+                animation: colle 1.5s ease-in-out 0.1s forwards;
+            }
+            &:nth-child(3){
+                animation: colle 1.5s ease-in-out 0.2s forwards;
+            }
+            &:nth-child(4){
+                animation: colle 1.5s ease-in-out 0.3s forwards;
+            }
+        }
+    } /* zone des plats */
+    &__plat{
+        height: 250px; 
+        @extend %case;
+        @include margin;
+        @include pad;
+        opacity: 0; 
+        animation: flou 1.3s linear forwards; 
+        @media screen and (min-width: $desktop){
+            height: 85px;
+        } /* type de plat */
+        &--choix{
+            @extend %choix;
+            @media screen and (min-width: $desktop){
+                width: 30vw;
+            }
+            &:nth-child(1){
+                animation: colle 1.5s ease-in-out forwards;
+            }
+            &:nth-child(2){
+                animation: colle 1.5s ease-in-out 0.1s forwards;
+            }
+            &:nth-child(3){
+                animation: colle 1.5s ease-in-out 0.2s forwards;
+            }
+        }
+    } /* zone des desserts */
+    &__dessert{
+        height: 250px; 
+        @extend %case;
+        @include margin;
+        @include pad;
+        opacity: 0; 
+        animation: flou 1.3s linear forwards; 
+        @media screen and (min-width: $desktop){
+            height: 85px;
+        } /* type des desserts */
+        &--choix{
+            @extend %choix;
+            @media screen and (min-width: $desktop){
+                width: 30vw;
+            }
+            &:nth-child(1){
+                animation: colle 1.5s ease-in-out forwards;
+            }
+            &:nth-child(2){
+                animation: colle 1.5s ease-in-out 0.1s forwards;
+            }
+            &:nth-child(3){
+                animation: colle 1.5s ease-in-out 0.2s forwards;
+            }
+        }
+    }
+}
+
+/* zone chaque assiette */
+.assiette{
+    width: 93vw;
+    height: 68px; 
+    display: flex;
+    justify-content:stretch; /* start/center décale la div validé */
+    border-radius: 20px;
+    @include shadow-ok;
+    background-color: $coul-bg;
+    overflow: hidden; 
+    &--un{
+        opacity: 0;
+        animation: flou 0.6s linear 0.8s forwards;
+    }
+    &--deux{
+        opacity: 0;
+        animation: flou 0.6s linear 0.9s forwards;
+    }
+    &--trois{
+        opacity: 0;
+        animation: flou 0.6s linear 1s forwards;
+    }
+    &--quatre{
+        opacity: 0;
+        animation: flou 0.6s linear 1.1s forwards;
+    } /* nom de l'assiette */
+    &__texte{
+        min-width: 60%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        text-indent: 10px;
+        flex: 1;
+        /* texte accompagnant du menu */
+        &__menu{
+            width: 100%;
+            width: 100%;
+            display: block;
+            margin: -10px 0 0 0;
+            font-size: 0.9rem;
+            font-weight: 300;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;   
+            &:first-of-type{
+                height: 24px;
+                margin: 12px 0 0 0;
+                font-size: $size-trois;
+                font-weight: 500;
+            }
+        }
+    } /* prix de l'assiette */
+    &__prix{
+        height: 32px;
+        width: 45px;
+        padding-left: 0px;
+        margin: 36px 3px 0 3px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-align: center;
+        transition: all 0.4s linear;
+    } /* zone validation choix assiette */
+    &--valide{ 
+        width: 0px;
+        min-width: 0px;
+        height: 68px;
+        display:flex;
+        flex: 0;
+        justify-content: center;
+        position:relative;
+        left: 1px; /* évite un escalier de l'animation */
+        background-color: lighten($couleur-tertiaire, 10%);
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        transform-origin: 100% 50%;
+        transition: all 0.4s linear;
+        &--icone{
+            position: absolute;
+            left: 20px;
+            margin: 24px 0 24px 0;
+            font-size: 1.25rem;
+            color: $couleur-encre-sec;
+        }
+    }
+    &:hover > .assiette--valide{
+        min-width: 60px;
+    }
+}
+
+/* selection choix assiette */
+.selection{
+    display: none;
+    @media screen and (max-width: $tablet-iphone){
+        &:hover + .assiette .assiette--valide{
+            min-width: 60px;
+            background-color: $couleur-tertiaire; 
+        }
+        &:checked + .assiette .assiette--valide{
+            min-width: 60px;
+            background-color: $couleur-tertiaire;
+        }
+        &:not(:checked) + .assiette .assiette--valide{
+            min-width: 0px;
+            background-color: $couleur-tertiaire;
+        }
+        &:checked + .assiette .assiette--valide--icone{
+            animation: tour 0.4s linear forwards;
+        }
+    }
+    @media screen and (min-width: $desktop){
+        &:checked + .assiette .assiette--valide{
+            min-width: 60px;
+            background-color: $couleur-tertiaire;
+        }
+        &:not(:checked) + .assiette:hover .assiette--valide--icone{
+            animation: tour 0.4s linear forwards;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

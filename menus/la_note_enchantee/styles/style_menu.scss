@@ -1,0 +1,451 @@
+/************************************/
+/* GOOGLE FONTS */
+/************************************/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+
+/************************************/
+/* CUSTOM PROPERTY*/
+/************************************/
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
+$Ohmyfood-white: #ffffff;
+$Ohmyfood-black: #000000;
+
+$Ohmyfood-primary-grey: #f7f7f7;
+$Ohmyfood-secondary-grey: #eaeaea;
+$Ohmyfood-shadow-1: 0 5px 15px rgba(0, 0, 0, 0.2);
+$Ohmyfood-shadow-2: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
+$Ohmyfood-shadow-3: 0 5px 15px rgba(0, 0, 0, 0.4);
+$transition: all 0.3s linear;
+$gradient: linear-gradient(
+  180deg,
+  rgba(255, 121, 218, 1) 0%,
+  rgba(147, 86, 220, 1) 100%
+);
+
+// fontsize
+$Ohmyfood-fs-1: 1.6rem;
+$Ohmyfood-fs-2: 1.8rem;
+$Ohmyfood-fs-3: 2.4rem;
+
+//font weight
+$Ohmyfood-fw-400: 400;
+$Ohmyfood-fw-600: 600;
+$Ohmyfood-fw-700: 700;
+
+/************************************/
+/* MIXINS */
+/************************************/
+@mixin flexbox-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button($padding, $gradient, $border-radius) {
+  opacity: 1;
+  color: white;
+  background: $gradient;
+  border-radius: $border-radius;
+  box-shadow: $Ohmyfood-shadow-1;
+  font-size: $Ohmyfood-fs-1;
+  padding: $padding;
+  margin: 0 auto;
+}
+
+@mixin button-hover {
+  opacity: 0.8;
+  transition: 0.3s;
+  box-shadow: $Ohmyfood-shadow-3;
+}
+
+/************************************/
+/* KEYFRAMES*/
+/************************************/
+
+@keyframes bounce-slide {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 0;
+    width: 17px;
+  }
+  25% {
+    -webkit-transform: translateX(2.5px);
+    transform: translateX(2.5px);
+    opacity: 0.25;
+    width: 27px;
+  }
+  50% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+    opacity: 0.5;
+    width: 37px;
+  }
+  75% {
+    -webkit-transform: translateX(7.5px);
+    transform: translateX(7.5px);
+    opacity: 0.75;
+    width: 47px;
+  }
+  100% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+    opacity: 1;
+    width: 57px;
+  }
+}
+
+// @keyframes price-slide {
+//   0% {
+//     padding-right: 60px;
+//   }
+//   25% {
+//     padding-right: 50px;
+//   }
+//   50% {
+//     padding-right: 40px;
+//   }
+//   75% {
+//     padding-right: 30px;
+//   }
+//   100% {
+//     padding-right: 20px;
+//   }
+// }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/************************************/
+/* GLOBAL STYLES*/
+/************************************/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: $Ohmyfood-white;
+  font-size: $Ohmyfood-fs-1;
+  color: $Ohmyfood-black;
+}
+
+a {
+  text-decoration: none;
+  color: $Ohmyfood-black;
+}
+
+li {
+  list-style: none;
+}
+
+img,
+button,
+a {
+  display: block;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+span {
+  display: inline-block;
+}
+
+input {
+  display: block;
+  width: 100%;
+  font: inherit;
+}
+
+/************************************/
+/* HEADER */
+/************************************/
+header {
+  background: #9356dc;
+  max-width: 37.5rem;
+
+  .header {
+    width: 37.5rem;
+    height: 6.4rem;
+    box-shadow: $Ohmyfood-shadow-2;
+    background: #99e2d0;
+
+    &__icon {
+      font-size: 2rem;
+    }
+
+    &__links {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background: #9356dc;
+      height: 100%;
+    }
+
+    &__logo {
+      display: block;
+      img {
+        width: 16.5rem;
+      }
+    }
+  }
+}
+
+.receipe__image {
+  width: 37.5rem;
+  background: #99e2d0;
+
+  &__image {
+    max-width: 100%;
+    height: 50rem;
+  }
+}
+.main__receipe__container {
+  position: relative;
+  background: #000000;
+}
+.main__receipe {
+  position: absolute;
+  top: -3.5rem;
+  width: 37.5rem;
+  padding-top: 4.2rem;
+  background: $Ohmyfood-primary-grey;
+  border-radius: 40px 40px 0 0;
+  z-index: 1;
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    h1 {
+      font-family: "Shrikhand", cursive;
+      margin-bottom: 4.2rem;
+    }
+  }
+
+  &__icon {
+    font-size: 2rem;
+  }
+
+  &__entries {
+    // background: yellowgreen;
+    padding-bottom: 4.5rem;
+    &__receipes {
+      position: relative;
+      &__title {
+        h2 {
+          font-weight: lighter;
+          margin-left: 1rem;
+          margin-bottom: 1.2rem;
+          text-transform: uppercase;
+
+          &::after {
+            content: "";
+            position: absolute;
+            background-color: $tertiary-color;
+            margin-left: inherit;
+            width: 4rem;
+            height: 0.3rem;
+            border-radius: 20px;
+            // width: 0;
+            // height: 0.2rem;
+            left: 0;
+            top: 2.8rem;
+          }
+
+          //   &:hover:after {
+          //     width: 4rem;
+          //     height: 0.3rem;
+          //     border-radius: 20px;
+          //     transition: $transition;
+          //   }
+        }
+      }
+
+      &__links {
+        display: grid;
+        grid-template-columns: 1fr;
+        // background: yellow;
+        max-width: 35rem;
+        margin: 0 1rem;
+        gap: 1rem;
+
+        &__link {
+          position: relative;
+          box-shadow: $Ohmyfood-shadow-1;
+          display: flex;
+          border-radius: 15px;
+          height: 7.2rem;
+          background: #f7f7f7;
+          max-width: 35rem;
+          transition: 0.5s ease;
+          border-radius: 15px;
+
+          &:hover {
+            transition: 0.5s ease;
+          }
+          &:hover &__one {
+            transition: 0.5s ease;
+            // background: #ff79da;
+            width: 83.7%;
+          }
+
+          &:hover &__tatu {
+            animation: bounce-slide 0.5s cubic-bezier(0.58, 0, 1, 0.43);
+            width: 5.7rem;
+            height: 100%;
+            display: flex;
+          }
+
+          &:hover .validation__box {
+            @include flexbox-center;
+            animation: slide-left 0.5s ease;
+            transform-origin: right;
+          }
+
+          &:hover &__one__zole {
+            transition: 0.5s ease;
+            // animation: price-slide 0.5s ease;
+          }
+
+          &__one {
+            // background: rgba(255, 121, 218, 1);
+            // border-radius: 15px 0px 0px 15px;
+            // border-radius: 15px 0px 0px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem;
+            // transition: $transition;
+            width: 100%;
+            height: 100%;
+            &__mosi {
+              //   background: brown;
+              white-space: nowrap;
+              overflow: hidden;
+
+              &__title {
+                text-overflow: ellipsis;
+                overflow: hidden;
+              }
+
+              &__description {
+                &__content {
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                }
+              }
+            }
+
+            &__zole {
+              //   background: #99e2d0;
+              font-weight: bold;
+              //   transition: 0.5s ease;
+              //   background: #9356dc;
+              margin-left: 2rem;
+              //   height: 100%;
+            }
+          }
+
+          &__tatu {
+            // margin-left: 20px;
+            position: absolute;
+            right: 0;
+
+            background: $tertiary-color;
+            @include flexbox-center();
+            border-radius: 0px 15px 15px 0px;
+            display: none;
+
+            &__check-icon {
+              background: white;
+              width: 2.2rem;
+              height: 2.2rem;
+              border-radius: 50%;
+              padding: 1.25rem;
+              @include flexbox-center();
+              //   display: none;
+
+              i {
+                color: $tertiary-color;
+                font-size: 2.25rem;
+                // transform: rotate(180deg);
+                animation: rotate 0.5s ease-in-out;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .receipes_command {
+    @include button(20px, $gradient, 50px);
+    width: 186px;
+    margin-bottom: 4.2rem;
+  }
+}
+
+/****************footer****************/
+footer {
+  max-width: 37.5rem;
+  height: 19.8rem;
+  background: #353535;
+  color: $Ohmyfood-white;
+
+  .footer {
+    padding: 31px 0px 31px 31px;
+    height: 100%;
+    &__logo {
+      margin-bottom: 2.5rem;
+      width: 10rem;
+      img {
+        width: 10rem;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+          brightness(102%) contrast(102%);
+      }
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      height: 100%;
+    }
+
+    &__link {
+      &__info {
+        display: block;
+        color: $Ohmyfood-white;
+        display: flex;
+
+        p {
+          margin-left: 1.2rem;
+        }
+      }
+    }
+  }
+}
