@@ -729,7 +729,11 @@ header {
 }
 ```
 
-### 10.
+### 10. receipe entries
+
+-add [receipe](./menus/la_palette_du_gout/styles/style_menu.scss)
+
+-style [receipe](./menus/la_palette_du_gout/styles/style_menu.scss)
 
 ### 11.
 
