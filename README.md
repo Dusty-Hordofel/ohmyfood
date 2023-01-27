@@ -731,11 +731,21 @@ header {
 
 ### 10. receipe entries
 
--add [receipe](./menus/la_palette_du_gout/styles/style_menu.scss)
+-fill [la_palette_du_gout](./menus/la_palette_du_gout/la_palette_du_gout.html)
 
--style [receipe](./menus/la_palette_du_gout/styles/style_menu.scss)
+-style [la_palette_du_gout](./menus/la_palette_du_gout/styles/style_menu.scss)
 
-### 11.
+---
+
+## Section 6. Le délice des sens
+
+### 11. Le délice des sens
+
+-fill [Le délice des sens](./menus/le_delice_des_sens/le_delice_des_sens.html)
+
+-style [Le délice des sens](./menus/le_delice_des_sens/styles/style_menu.scss)
+
+---
 
 ### 12.
 
@@ -756,8 +766,6 @@ header {
 ### 20.
 
 ---
-
-## Section 6.
 
 ## Section 7.
 
