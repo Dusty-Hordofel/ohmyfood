@@ -1,8 +1,4 @@
-
-@import "utils/variables";
-@import "utils/extensions";
-@import "utils/mixins";
-@import "base/regles";
+/*@import "base/rules";
 @import "base/animations";
 @import "components/boutons";
 @import "layouts/header";
@@ -13,70 +9,11 @@
 @import "layouts/footer";
 @import "pages/fonctionnement";
 @import "pages/loader";
-
-
- 
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@import "utils/variables";
+@import "utils/extensions";
+@import "utils/mixins";*/
+
+@import "utils/variables", "utils/extensions", "utils/mixins", "base/rules",
+  "base/animations", "components/boutons", "layouts/header", "layouts/bandeau",
+  "layouts/formulaires", "layouts/navigation", "layouts/coeur", "layouts/footer",
+  "pages/fonctionnement", "pages/loader";
