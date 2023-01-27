@@ -1,0 +1,99 @@
+/* fonctionnement */
+.fonctionnement{
+    height: 440px;
+    background: $coul-bg;
+    @media screen and (min-width: $desktop){
+        height: 280px;
+    } /* titre de fonctionnement */
+    &__titre{
+        margin: 0;
+        padding: 48px 0 18px 0;
+        font-size: $size-deux;
+        text-indent: 6%;
+    } /* zone des 'boutons' */
+    &__explication{
+        display: flex;
+        flex-flow: row wrap;    
+    }
+} /* boutons */
+.bouton{
+    width: 87%;
+    height: 75px;
+    position: relative;
+    margin: 10px auto; 
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+    @include shadow-ok;
+    background-color: $couleur-bg;  
+    font-size: $size-un;
+    font-weight: 500;
+    text-align: start;
+    color: $couleur-encre;
+    font-family: 'Roboto', sans-serif;
+    @media screen and (min-width: $desktop){
+        width: 25%;
+    }
+    &:hover{
+        animation: demi-mou 1s ease-in 0.05s 1 forwards;
+        cursor: pointer;
+    }  /* zone numero de bouton */
+    &--numero{
+        position: absolute;
+        left: -10px;
+        top: 26px;
+        padding: 3px 8.5px 2px 6.5px;
+        background-color: $couleur-primaire;
+        border: 1px solid $couleur-primaire;
+        border-radius: 22px;
+        color: $couleur-encre-sec;
+    }
+    &:hover .bouton--numero{
+        animation: tourne 1.5s linear forwards;
+    } /* icone de bouton */
+    &--noir{
+        width: 14px;
+        margin: 0 7% 0 11%;  
+        position: relative;
+        color: grey;
+        text-indent: 11%;
+        font-size: $size-un;   
+    }
+    &:hover .bouton--noir{
+        opacity: 0;
+    } /* icone de bouton violet */
+    &--violet{
+        width: 14px;
+        position: absolute;
+        bottom: 30px;
+        left: 0px;
+        z-index: -1;
+        margin: 0 7% 0 11%; 
+        color: $couleur-primaire;
+        text-indent: 11%;
+        font-size: $size-un;
+    }
+    &:hover .bouton--violet{
+        z-index: 1;
+    }
+    &--tel{
+        font-size: $size-trois; 
+    }
+    &::after{
+        content:'';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background-color: $couleur-primaire;
+        @include shadow-ok;
+        border-radius: 20px;
+        opacity: 0;
+    }
+    &:hover::after{
+        z-index: 1;
+        opacity: 0.1;
+    }
+}

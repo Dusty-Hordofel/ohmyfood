@@ -1,0 +1,33 @@
+/* header */
+%tap-fleche {
+    width: 18px;
+    height: 20px;
+    padding: 14px 15px 14px 15px;
+}
+/* bouton */
+%bouton{    
+    opacity: 0.9;  
+    cursor: pointer;                                            
+    animation: mou 0.6s ease-in-out 0.05s 1 forwards;
+}
+
+/* coeur*/
+%tap-coeur{
+    height: 48px;
+    width: 48px;
+}
+
+/* formulaire repas */
+%case{
+    display: flex;
+    flex-flow: row wrap;  
+    justify-content: space-around;
+    align-content:space-around;
+    border: none;
+}
+%choix{
+    width: 93vw;
+    height: 68px; 
+    display: flex;
+    transform: translateY(10px);
+}

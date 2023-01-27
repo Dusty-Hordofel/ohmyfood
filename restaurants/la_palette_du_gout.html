@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang=fr-FR>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Restaurant La palette du goût avec Ohmyfood">
+        <title>La palette du goût</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="../image/logo/favico/ohmyfoodfavicon.png">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">  
+        <link rel="stylesheet" href="../css/prefixed/style.css" type='text/css'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    </head>
+
+    <body>  
+        
+        <!-- tête de page -->
+        <header class='tête'>
+
+            <!-- titre header -->
+            <h1 class='tête__titre'>ohmyfood</h1>
+
+            <!-- lien retour accueuil -->
+            <a href="../index.html" class='tête__flèche'>
+                <i class="fas fa-arrow-left tête__flèche--vide"></i>
+                <i class="fas fa-arrow-left tête__flèche--plein"></i>
+            </a>   
+        </header>
+
+        <main>
+
+            <!-- bandeau -->
+            <article class='bandeau'>
+
+                <!-- image du restaurant -->
+                <img class='bandeau__image' src='../image/restaurants/la-palette-du-gout900.webp' alt='La palette du goût'>
+                
+                <!-- zone de présentation du restaurant -->
+                <div class='bandeau__texte'> 
+
+                    <!-- titre nom du restaurant -->
+                    <h2 class='bandeau__texte__titre'>La palette du goût</h2>
+
+                    <!-- selection j'aime -->
+                    <input class='bandeau__texte--selection' type='checkbox' name='aime' id='aime_la_palette_du_gout'>
+
+                    <!-- animation coeur sur multiples pages, nomage BEM spécial -->
+                    <label for='aime_la_palette_du_gout' class='coeur'> 
+                        <i class='far fa-heart coeur--vide'></i>
+                        <span class='coeur__filtre'><i class="fas fa-heart coeur__filtre--plein"></i></span>
+                    </label>
+                </div>
+            </article>
+
+            <!-- formulaire choix de plats -->
+            <form class='repas'>
+
+                <!-- titre des entrées -->
+                <h3 class="repas__titre">entrées <span class="repas__titre--barre"></span></h3> 
+
+                <!-- groupe des entrées -->
+                <fieldset class='repas__entrée'>
+
+                    <!-- entrée 1 -->
+                    <div class='repas__entrée--choix'>
+
+                        <!-- selection choix -->
+                        <input type="checkbox" name='menu_la_palette_du_gout' id='entrée1' class='selection'>
+                        <label for='entrée1' class='assiette assiette--un'>
+
+                            <!-- description entrée -->
+                            <span class='assiette__texte'>
+                                <span class='assiette__texte__menu' title="Fricassée d'escargot">Fricassée d'escargot</span>
+                                <span class='assiette__texte__menu' title="Au piment d'Espelette">Au piment d'Espelette</span>
+                            </span>
+                            <span class='assiette__prix'>25€</span>
+
+                            <!-- validation -->
+                            <span class='assiette--valide'>
+                                <i class="fas fa-check-circle assiette--valide--icone"></i>
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- entrée 2 -->
+                    <div class='repas__entrée--choix'>
+
+                        <!-- selection choix -->
+                        <input type="checkbox" name='menu_la_palette_du_gout' id='entrée2' class='selection'>
+                        <label for='entrée2' class='assiette assiette--deux'>
+
+                            <!-- description entrée -->
+                            <span class='assiette__texte'>
+                                <span class='assiette__texte__menu' title="Foie gras de canard mi-cuit">Foie gras de canard mi-cuit</span>
+                                <span class='assiette__texte__menu' title="Et ses copeaux de truffe noire">Et ses copeaux de truffe noire</span>
+                            </span>
+                            <span class='assiette__prix'>35€</span>
+
+                            <!-- validation -->
+                            <span class='assiette--valide'>
+                                <i class="fas fa-check-circle assiette--valide--icone"></i>
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- entrée 3 -->
+                    <div class='repas__entrée--choix'>
+
+                        <!-- selection choix -->
+                        <input type="checkbox" name='menu_la_palette_du_gout' id='entrée3' class='selection'>
+                        <label for='entrée3' class='assiette assiette--trois'>
+
+                            <!-- description entrée -->
+                            <span class='assiette__texte'>
+                                <span class='assiette__texte__menu' title="Oeuf au plat">Oeuf au plat</span>
+                                <span class='assiette__texte__menu' title="Assaisonné à la truffe sur lit de caviar">Assaisonné à la truffe sur lit de caviar</span>
+                            </span>
+                            <span class='assiette__prix'>20€</span>
+
+                            <!-- validation -->
+                            <span class='assiette--valide'>
+                                <i class="fas fa-check-circle assiette--valide--icone"></i>
+                            </span>
+                        </label>
+                    </div>
+
+                </fieldset>
+                
+                <!-- titre des plats -->
+                <h3 class="repas__titre">plats<span class="repas__titre--barre"></span></h3>
+
+                <!-- groupe des plats -->
+                <fieldset class='repas__plat'>
+
+                    <!-- plat 1 -->
+                    <div class='repas__plat--choix'>
+
+                        <!-- selection choix -->
+                        <input type="checkbox" name='menu_la_palette_du_gout' id='plat1' class='selection'>
+                        <label for='plat1' class='assiette assiette--un'>
+
+                            <!-- description plat -->
+                            <span class='assiette__texte'>
+                                <span class='assiette__texte__menu' title="Filet de boeuf aux herbes">Filet de boeuf aux herbes</span>
+                                <span class='assiette__texte__menu' title="Accompagné de sa ribambelle de légumes">Accompagné de sa ribambelle de légumes</span>
+                            </span>
+                            <span class='assiette__prix'>40€</span>
+
+                            <!-- validation -->
+                            <span class='assiette--valide'>
+                                <i class="fas fa-check-circle assiette--valide--icone"></i>
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- plat 2 -->
+                    <div class='repas__plat--choix'>
+
+                        <!-- selection choix -->
+                        <input type="checkbox" name='menu_la_palette_du_gout' id='plat2' class='selection'>
+                        <label for='plat2' class='assiette assiette--deux'>
+
+                            <!-- description plat -->
+                            <span class='assiette__texte'>
+                                <span class='assiette__texte__menu' title="Parmentier de queue de boeuf">Parmentier de queue de boeuf</span>
+                                <span class='assiette__texte__menu' title="À la truffe noire sur sa purée de panais">À la truffe noire sur sa purée de panais</span>
+                            </span>
+                            <span class='assiette__prix'>35€</span>
+
+                            <!-- validation -->
+                            <span class='assiette--valide'>
+                                <i class="fas fa-check-circle assiette--valide--icone"></i>
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- plat 3 -->
+                    <div class='repas__plat--choix'>
+
+                        <!-- selection choix -->
+                        <input type="checkbox" name='menu_la_palette_du_gout' id='plat3' class='selection'>
+                        <label for='plat3' class='assiette assiette--trois'>
+
+                            <!-- description plat -->
+                            <span class='assiette__texte'>
+                                <span class='assiette__texte__menu' title="Filet de turbot">Filet de turbot</span>
+                                <span class='assiette__texte__menu' title="Aux agrumes">Aux agrumes</span>
+                            </span>
+                            <span class='assiette__prix'>44€</span>
+
+                            <!-- validation -->
+                            <span class='assiette--valide'>
+                                <i class="fas fa-check-circle assiette--valide--icone"></i>
+                            </span>
+                        </label>
+                    </div>
+                </fieldset>
+            
+                <!-- titre des desserts -->
+                <h3 class="repas__titre">desserts<span class="repas__titre--barre"></span></h3>
+
+                <!-- groupe des desserts -->
+                <fieldset class='repas__dessert'>
+
+                    <!-- dessert 1 -->
+                    <div class='repas__dessert--choix'>
+
+                        <!-- selection choix -->
+                        <input type="checkbox" name='menu_la_palette_du_gout' id='dessert1' class='selection'>
+                        <label for='dessert1' class='assiette assiette--un'>
+
+                            <!-- description dessert -->
+                            <span class='assiette__texte'>
+                                <span class='assiette__texte__menu' title="Paris-Brest">Paris-Brest</span>
+                                <span class='assiette__texte__menu' title="Revisité">Revisité</span>
+                            </span>
+                            <span class='assiette__prix'>18€</span>
+
+                            <!-- validation -->
+                            <span class='assiette--valide'>
+                                <i class="fas fa-check-circle assiette--valide--icone"></i>
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- dessert 2 -->
+                    <div class='repas__dessert--choix'>
+
+                        <!-- selection choix -->
+                        <input type="checkbox" name='menu_la_palette_du_gout' id='dessert2' class='selection'>
+                        <label for='dessert2' class='assiette assiette--deux'>
+
+                            <!-- description dessert -->
+                            <span class='assiette__texte'>
+                                <span class='assiette__texte__menu' title="Macaron au chocolat d'exception">Macaron au chocolat d'exception</span>
+                                <span class='assiette__texte__menu' title="Et glace à la vanille de Madagascar">Et glace à la vanille de Madagascar</span>
+                            </span>
+                            <span class='assiette__prix'>22€</span>
+
+                            <!-- validation -->
+                            <span class='assiette--valide'>
+                                <i class="fas fa-check-circle assiette--valide--icone"></i>
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- dessert 3 -->
+                    <div class='repas__dessert--choix'>
+
+                        <!-- selection choix -->
+                        <input type="checkbox" name='menu_la_palette_du_gout' id='dessert3' class='selection'>
+                        <label for='dessert3' class='assiette assiette--trois'>
+
+                            <!-- description dessert -->
+                            <span class='assiette__texte'>
+                                <span class='assiette__texte__menu' title="Mousse au chocolat">Mousse au chocolat</span>
+                                <span class='assiette__texte__menu' title="Au piment d'Espelette et à la truffe noire">Au piment d'Espelette et à la truffe noire</span>
+                            </span>
+                            <span class='assiette__prix'>23€</span>
+
+                            <!-- validation -->
+                            <span class='assiette--valide'>
+                                <i class="fas fa-check-circle assiette--valide--icone"></i>
+                            </span>
+                        </label>
+                    </div>
+                </fieldset>
+                <input type='button' class='repas--bouton' value="Commander">
+            </form>
+        </main>
+
+        <!-- pied de page -->
+        <footer class='pied'>
+
+            <!-- titre pied de page -->
+            <h4 class='pied__titre'>ohmyfood</h4>
+
+            <!-- liste -->
+            <ul class='pied__liste'>
+
+                <li class='pied__liste--element'>
+
+                    <!-- lien -->
+                    <a href='#' class='lien'><i class="fas fa-utensils lien__icone"></i>Proposer un restaurant</a>
+                </li>
+
+                <li class='pied__liste--element'>
+
+                    <!-- lien -->
+                    <a href='#' class='lien'><i class="fas fa-hands-helping lien__icone"></i>Devenir partenaire</a>
+                </li>
+
+                <li class='pied__liste--element'>
+
+                    <!-- lien -->
+                    <a href='../mentions-legales/mentions-legales-site-internet.pdf' class='lien'>Mentions légales</a>
+                </li>
+
+                <li class='pied__liste--element'>
+
+                    <!-- lien vers boite mail -->
+                    <a href='mailto:ohmyfoodTest@hotmail.fr' class='lien'>Contact</a>
+                </li>
+            </ul>
+        </footer>
+        <script src="https://kit.fontawesome.com/c1d244d3fe.js" crossorigin="anonymous" async></script> 
+    </body>
+</html>

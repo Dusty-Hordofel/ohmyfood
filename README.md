@@ -749,9 +749,27 @@ header {
 
 ### 12.
 
-### 13.
+-fill [Le délice des sens](./menus/le_delice_des_sens/le_delice_des_sens.html)
 
-### 14.
+-style [Le délice des sens](./menus/le_delice_des_sens/styles/style_menu.scss)
+
+---
+
+## Section 7. La note enchantée & À la française
+
+### 13. La note enchantée
+
+-fill [La note enchantée](./menus/le_delice_des_sens/le_delice_des_sens.html)
+
+-use style [La note enchantée](./menus/le_delice_des_sens/styles/style_menu.scss)
+
+### 14. À la française
+
+-fill [À la française](./menus/la_française/a_la_française.html)
+
+-use style [À la française](./menus/la_française/styles/style_menu.scss)
+
+---
 
 ### 15.
 
@@ -766,8 +784,6 @@ header {
 ### 20.
 
 ---
-
-## Section 7.
 
 ## Section 8.
 
