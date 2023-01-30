@@ -1,136 +1,356 @@
-/* navigation restaurants */
-.restaurants{
-    height: 1190px;
-    background-color: $couleur-bg;
-    @media screen and (min-width: $desktop){
-        height: 700px;
-    } /* titre de la zone de navigation des restaurants */
-    &__titre{
-        position: relative;
-        margin: 0;
-        padding: 55px 0 20px 0;
-        text-indent: 6%;
-        font-size: $size-deux;  
-    } /* élément de navigation */
-    &__navigation{
-        height: 1070px;
+/************************************/
+/* HOMEPAGE MAIN */
+/************************************/
+
+main {
+  width: 37.5rem;
+
+  /*----------loaction-section---------*/
+  .location {
+    height: 4.9rem;
+    background: $Ohmyfood-secondary-grey;
+    @include flexbox-center();
+
+    &__icon {
+      width: 1.2rem;
+      height: 1.6rem;
+    }
+    &__city {
+      margin-left: 1.9rem; //à revoir en cas de changement d'écran
+    }
+  }
+
+  /*----------hero-section---------*/
+  .hero__container {
+    // background: #9356dc;
+    background: $Ohmyfood-primary-grey;
+    padding-top: 42px;
+
+    height: 29rem;
+    display: flex;
+    justify-content: center;
+
+    .hero {
+      width: 310px;
+      &__title {
+        margin-bottom: 23px;
+        margin: 0 20px 0 20px;
+      }
+      &__text {
+        margin: 23px 0 31px 0;
+      }
+
+      &__button {
+        @include button(20px, $gradient, 50px);
+        width: 221px;
+
+        &:hover {
+          @include button-hover();
+        }
+      }
+    }
+  }
+
+  /*----------functionning-section---------*/
+  .functioning__container {
+    height: 37.1rem;
+
+    .functioning {
+      &__title {
+        color: $Ohmyfood-black;
+        margin: 0px 0px 34px 25px;
+      }
+
+      &__buttons {
         display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        @media screen and (min-width: $desktop){
-            height: 550px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &__button {
+        position: relative;
+        width: 32.5rem;
+        height: 7.6rem;
+        @include flexbox-center();
+        // background: #99e2d0;
+        @include button(10px, $Ohmyfood-primary-grey, 20px);
+        &:not(:nth-last-child(1)) {
+          margin-bottom: 22px;
         }
+
+        &__number {
+          position: absolute;
+          left: -10px;
+          background: $primary-color;
+          border-radius: 50%;
+          margin-right: 2.2rem;
+          width: 2.5rem;
+          height: 2.5rem;
+          @include flexbox-center();
+        }
+        &__icon {
+          color: $primary-color;
+        }
+
+        &__text {
+          margin-left: 26px;
+          display: inline-block;
+          color: $Ohmyfood-black;
+        }
+      }
     }
-}
-/* carte de restaurant */
-.carte{
-    height: 250px;
-    width: 87%;
-    display: inline;
-    position: relative;
-    border-radius: 20px;
-    color: $couleur-encre;
-    background: $coul-bg;
-    @include shadow-ok;
-    @media screen and (min-width: $desktop){
-        width: 45%;
-    }
-    @media screen and (min-width: $desktop){
-        &:hover{
-            animation: coup 2s ease-in 0.05s forwards;
-        } 
-    } /* zone de lien */
-    &__lien{
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+  }
+
+  /*----------constrol-section---------*/
+  .restaurant__container {
+    height: 1121px;
+    // background: #99e2d0;
+    margin-bottom: 65px;
+
+    .restaurant {
+      &__title {
+        margin-left: 25px;
+        margin-bottom: 20px;
+      }
+
+      &__menus {
+        display: grid;
+        justify-content: center;
+        grid-column: 1fr;
+        margin: 0 auto;
+        gap: 20px;
+      }
+
+      &__menu {
+        width: 343px;
+        height: 253px;
+        background: $Ohmyfood-white;
         border-radius: 20px;
-        background: $coul-bg;
-        text-decoration: none;
-        &:link{
-            color: $couleur-encre;
-        }
-        &:visited{
-            color: $couleur-encre;
-        } /* pancarte de nouveauté */
-        &--nouveau{
-            width: 80px;
-            position: absolute;
-            right: 12px;
-            top: 12px;
-            padding:6px 0;
-            transform-origin: 10% 50%;
-            border-radius: 2px;
-            background-color: $couleur-tertiaire;
-            text-align: center;
-            font-size: 0.8rem;
-            font-weight: 500;
-            color:  darken($couleur-tertiaire, 40%);
-        } /* image du restaurant */
-        &__image{
-            height: 175px;
-            width: 100%;
+        box-shadow: $Ohmyfood-shadow-1;
+        &__image {
+          img {
+            height: 178px;
+            width: 343px;
             object-fit: cover;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-        } /* nom du restaurant */
-        &__titre{
-            margin: 0;
-            padding: 13px 0 0 0;
-            font-size: $size-trois;
-            text-indent: 4%;
-            font-weight: 600;
-        } /* lieu du restaurant */
-        &__texte{
-            margin: 0;
-            padding: 5px 0 0 0;
-            text-indent: 4%;
-            font-size: 1.05rem;
-            font-weight: 300;
-        } /* zone coeur et interaction */
-        &--selection{
-            display: none;
-            &:checked + .coeur .coeur--vide{
-                animation: efface 0.5s linear forwards;
-            }
-            &:checked + .coeur .coeur__filtre--plein{   
-                opacity: 1;
-            }
-            &:checked + .coeur .coeur__filtre--plein{
-                opacity: 1;
-                z-index: 1;
-                animation: grandi-bat 1.8s linear forwards;
-            }
-            @media screen and (min-width: $desktop){
-                &:hover + .coeur .coeur--vide{
-                    animation: efface 0.5s linear forwards;
-                }
-                &:hover + .coeur .coeur__filtre--plein{   
-                    opacity: 1;
-                }
-                &:hover + .coeur .coeur__filtre--plein{
-                    z-index: 1;
-                    opacity: 1;
-                    animation: grandi-bat 1.8s linear forwards;
-                }
-            }   
+            border-radius: 20px 20px 0 0;
+          }
         }
+
+        &__description {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 25px;
+          height: 75px;
+          &__text {
+          }
+          &__icon {
+            font-size: 25px;
+
+            cursor: grab;
+            &:hover {
+              background: red;
+            }
+          }
+        }
+      }
     }
-    @media screen and (min-width: $desktop){
-        &:hover .carte__lien--nouveau{
-            z-index: 1;
-            animation: tombe 2s linear 0.05s;
-        }
-    }    
+  }
 }
 
+/************************************/
+/* RESTAURANT NAVIGATION*/
+/************************************/
+.receipe__image {
+  width: 37.5rem;
+  background: #99e2d0;
 
+  &__image {
+    max-width: 100%;
+    height: 50rem;
+  }
+}
+.main__receipe__container {
+  position: relative;
+  background: #000000;
+}
+.main__receipe {
+  position: absolute;
+  top: -3.5rem;
+  width: 37.5rem;
+  padding-top: 4.2rem;
+  background: $Ohmyfood-primary-grey;
+  border-radius: 40px 40px 0 0;
+  z-index: 1;
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    h1 {
+      font-family: "Shrikhand", cursive;
+      margin-bottom: 4.2rem;
+    }
+  }
 
+  &__icon {
+    font-size: 2rem;
+  }
 
+  &__entries {
+    // background: yellowgreen;
+    padding-bottom: 4.5rem;
+    &__receipes {
+      position: relative;
+      &__title {
+        h2 {
+          font-weight: lighter;
+          margin-left: 1rem;
+          margin-bottom: 1.2rem;
+          text-transform: uppercase;
 
+          &::after {
+            content: "";
+            position: absolute;
+            background-color: $tertiary-color;
+            margin-left: inherit;
+            width: 4rem;
+            height: 0.3rem;
+            border-radius: 20px;
+            // width: 0;
+            // height: 0.2rem;
+            left: 0;
+            top: 2.8rem;
+          }
 
+          //   &:hover:after {
+          //     width: 4rem;
+          //     height: 0.3rem;
+          //     border-radius: 20px;
+          //     transition: $transition;
+          //   }
+        }
+      }
 
+      &__links {
+        display: grid;
+        grid-template-columns: 1fr;
+        // background: yellow;
+        max-width: 35rem;
+        margin: 0 1rem;
+        gap: 1rem;
 
+        &__link {
+          position: relative;
+          box-shadow: $Ohmyfood-shadow-1;
+          display: flex;
+          border-radius: 15px;
+          height: 7.2rem;
+          background: #f7f7f7;
+          max-width: 35rem;
+          transition: 0.5s ease;
+          border-radius: 15px;
 
+          &:hover {
+            transition: 0.5s ease;
+          }
+          &:hover &__one {
+            transition: 0.5s ease;
+            // background: #ff79da;
+            width: 83.7%;
+          }
+
+          &:hover &__tatu {
+            animation: bounce-slide 0.5s cubic-bezier(0.58, 0, 1, 0.43);
+            width: 5.7rem;
+            height: 100%;
+            display: flex;
+          }
+
+          &:hover .validation__box {
+            @include flexbox-center;
+            animation: slide-left 0.5s ease;
+            transform-origin: right;
+          }
+
+          &:hover &__one__zole {
+            transition: 0.5s ease;
+            // animation: price-slide 0.5s ease;
+          }
+
+          &__one {
+            // background: rgba(255, 121, 218, 1);
+            // border-radius: 15px 0px 0px 15px;
+            // border-radius: 15px 0px 0px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem;
+            // transition: $transition;
+            width: 100%;
+            height: 100%;
+            &__mosi {
+              //   background: brown;
+              white-space: nowrap;
+              overflow: hidden;
+
+              &__title {
+                text-overflow: ellipsis;
+                overflow: hidden;
+              }
+
+              &__description {
+                &__content {
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                }
+              }
+            }
+
+            &__zole {
+              //   background: #99e2d0;
+              font-weight: bold;
+              //   transition: 0.5s ease;
+              //   background: #9356dc;
+              margin-left: 2rem;
+              //   height: 100%;
+            }
+          }
+
+          &__tatu {
+            // margin-left: 20px;
+            position: absolute;
+            right: 0;
+
+            background: $tertiary-color;
+            @include flexbox-center();
+            border-radius: 0px 15px 15px 0px;
+            display: none;
+
+            &__check-icon {
+              background: white;
+              width: 2.2rem;
+              height: 2.2rem;
+              border-radius: 50%;
+              padding: 1.25rem;
+              @include flexbox-center();
+              //   display: none;
+
+              i {
+                color: $tertiary-color;
+                font-size: 2.25rem;
+                // transform: rotate(180deg);
+                animation: rotate 0.5s ease-in-out;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .receipes_command {
+    @include button(20px, $gradient, 50px);
+    width: 186px;
+    margin-bottom: 4.2rem;
+  }
+}
