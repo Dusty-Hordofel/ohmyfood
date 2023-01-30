@@ -102,6 +102,48 @@ input {
     transform: rotate(360deg);
   }
 }
+@keyframes stroke-animation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  30% {
+    stroke-dashoffset: 1550;
+  }
+  60% {
+    stroke-dashoffset: 3100;
+    fill: transparent;
+    transform: scale(1);
+  }
+  80% {
+    fill: pink;
+    transform: scale(1.1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    stroke-dashoffset: 3100;
+    fill: pink;
+  }
+}
+@keyframes fade-animation {
+  70% {
+    fill: transparent;
+    transform: scale(1);
+  }
+  80% {
+    fill: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
 /************************************/
 /* HEADER */
 /************************************/
@@ -141,6 +183,37 @@ header {
 }
 .restaurant__header .header__logo img {
   width: 16.5rem;
+}
+
+.restaurant__menu__description__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  stroke-width: 30;
+  stroke: black;
+  fill: white;
+  cursor: pointer;
+}
+.restaurant__menu__description__container .heart {
+  width: 30px;
+  stroke-width: 30;
+  stroke: black;
+  fill: white;
+  cursor: pointer;
+}
+.restaurant__menu__description__container .heart-full {
+  position: absolute;
+  fill: url(#text-fill);
+  stroke: none;
+}
+.restaurant__menu__description__container .heart-empty {
+  width: 30px;
+  position: relative;
+}
+.restaurant__menu__description__container .heart-empty:hover {
+  opacity: 0;
+  transition: 0.5s;
 }
 
 /************************************/
@@ -283,17 +356,9 @@ main .restaurant__container .restaurant__menu__description {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px;
+  padding: 20px;
   height: 75px;
 }
-main .restaurant__container .restaurant__menu__description__icon {
-  font-size: 25px;
-  cursor: grab;
-}
-main .restaurant__container .restaurant__menu__description__icon:hover {
-  background: red;
-}
-
 /************************************/
 /* RESTAURANT NAVIGATION*/
 /************************************/
@@ -322,12 +387,18 @@ main .restaurant__container .restaurant__menu__description__icon:hover {
 }
 .main__receipe__title {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin: 0 1rem;
 }
 .main__receipe__title h1 {
   font-family: "Shrikhand", cursive;
+  font-size: 2.8rem;
   margin-bottom: 4.2rem;
+}
+.main__receipe__title .restaurant__menu__description__container {
+  display: flex;
+  align-items: center;
+  height: 40px;
 }
 .main__receipe__icon {
   font-size: 2rem;

@@ -771,7 +771,46 @@ header {
 
 ---
 
-### 15.
+## Section 8. Heart
+
+### 15. Heart icon
+
+- add [heart layout](./sass/layouts/heart.scss) and use it in [index.html](index.html) & [restaurants](./restaurants/)
+
+```scss
+.restaurant__menu__description__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  stroke-width: 30;
+  stroke: black;
+  fill: white;
+  cursor: pointer;
+
+  .heart {
+    width: 30px;
+    stroke-width: 30;
+    stroke: black;
+    fill: white;
+    cursor: pointer;
+  }
+
+  .heart-full {
+    position: absolute;
+    fill: url(#text-fill);
+    stroke: none;
+  }
+  .heart-empty {
+    width: 30px;
+    position: relative;
+    &:hover {
+      opacity: 0;
+      transition: 0.5s;
+    }
+  }
+}
+```
 
 ### 16.
 
@@ -784,8 +823,6 @@ header {
 ### 20.
 
 ---
-
-## Section 8.
 
 ## Section 9.
 

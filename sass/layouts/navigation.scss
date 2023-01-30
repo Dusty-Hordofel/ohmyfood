@@ -140,17 +140,9 @@ main {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 25px;
+          padding: 20px;
           height: 75px;
           &__text {
-          }
-          &__icon {
-            font-size: 25px;
-
-            cursor: grab;
-            &:hover {
-              background: red;
-            }
           }
         }
       }
@@ -184,11 +176,19 @@ main {
   z-index: 1;
   &__title {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 0 1rem;
+
     h1 {
       font-family: "Shrikhand", cursive;
+      font-size: 2.8rem;
       margin-bottom: 4.2rem;
+    }
+
+    .restaurant__menu__description__container {
+      display: flex;
+      align-items: center;
+      height: 40px;
     }
   }
 
@@ -197,7 +197,6 @@ main {
   }
 
   &__entries {
-    // background: yellowgreen;
     padding-bottom: 4.5rem;
     &__receipes {
       position: relative;
