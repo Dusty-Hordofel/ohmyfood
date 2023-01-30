@@ -1,72 +1,44 @@
-/* header */
-.tête{
-    height: 62px;
-    position: relative;
-    background: $coul-bg;
-    text-align: center;
-    &:hover .tête__titre{
-        animation: zoop 4s linear infinite;
-    } 
-    &__logo{
-        @include margin;
-        /* logo index*/
-        &__image{
-            width: 158px;
-            padding-top: 18px;
-        }
+/************************************/
+/* HEADER */
+/************************************/
+
+/******************Home Header ******************/
+header {
+  @include flexbox-center();
+  width: 37.5rem;
+  height: 6.4rem;
+  box-shadow: $Ohmyfood-shadow-2;
+}
+
+/******************restaurant Header ******************/
+
+.restaurant__header {
+  background: #9356dc;
+  max-width: 37.5rem;
+
+  .header {
+    width: 37.5rem;
+    height: 6.4rem;
+    box-shadow: $Ohmyfood-shadow-2;
+    background: #99e2d0;
+
+    &__icon {
+      font-size: 2rem;
     }
-    /* nom du site */
-    &__titre{
-        width: 200px;
-        padding: 10px 0;
-        margin: 0 auto;
-        font-size: 1.8rem;
-        font-weight: 400;
-        font-family: 'Shrikhand', cursive;
-    } /* zone flèche */
-    &__flèche{
-        @extend %tap-fleche;
-        position:absolute;
-        top: 9px;
-        left: 2%; 
-        color: $couleur-encre;
-        text-decoration: none;
-        &:visited{
-            color: $couleur-encre;
-        } /* icone flèche */
-        &--vide{
-            @extend %tap-fleche;
-            position:absolute;
-            top: 0px;
-            left: 0px;
-            font-size: 1.3rem; 
-        }
-        @media screen and (min-width: $desktop){
-            &:hover .tête__flèche--vide{
-                opacity: 0;
-                transform: translateX(-25px);
-                transition: all 0.3s;
-            }
-        } /* element d'animation fleche */
-        &--plein{
-            @extend %tap-fleche;
-            position:absolute;
-            top: 0px;
-            left: 0px;
-            font-size: 1.3rem;
-            background: linear-gradient(90deg, $couleur-secondaire 40%, $couleur-primaire 75%);
-            background-repeat: no-repeat;
-            -webkit-background-clip: text; 
-            color: transparent;
-            opacity: 0;
-            background-position: left;  /* pour version bg-size */
-            transform-origin: 100% 50%; /* pour version scale */ 
-        }
-        @media screen and (min-width: $desktop){
-            &:hover .tête__flèche--plein {
-                opacity: 1;
-                animation: strillé 0.3s linear;
-            }
-        }
+
+    &__links {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background: #9356dc;
+      height: 100%;
     }
+
+    &__logo {
+      display: block;
+      img {
+        width: 16.5rem;
+      }
+    }
+  }
 }

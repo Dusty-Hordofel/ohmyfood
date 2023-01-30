@@ -1,19 +1,11 @@
-/*@import "base/rules";
-@import "base/animations";
-@import "components/boutons";
+@import "utils/variables";
+@import "utils/extensions";
+@import "utils/mixins";
+@import "base/rules";
+@import "base/animations.scss";
 @import "layouts/header";
-@import "layouts/bandeau";
 @import "layouts/formulaires";
 @import "layouts/navigation";
-@import "layouts/coeur";
 @import "layouts/footer";
 @import "pages/fonctionnement";
 @import "pages/loader";
-@import "utils/variables";
-@import "utils/extensions";
-@import "utils/mixins";*/
-
-@import "utils/variables", "utils/extensions", "utils/mixins", "base/rules",
-  "base/animations", "components/boutons", "layouts/header", "layouts/bandeau",
-  "layouts/formulaires", "layouts/navigation", "layouts/coeur", "layouts/footer",
-  "pages/fonctionnement", "pages/loader";

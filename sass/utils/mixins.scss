@@ -1,17 +1,22 @@
-// padding
-@mixin pad {
-    padding: 5px 0 0 0;
+@mixin flexbox-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-// margin
-@mixin margin {
-    margin: 0 0 0 0;
+@mixin button($padding, $gradient, $border-radius) {
+  opacity: 1;
+  color: white;
+  background: $gradient;
+  border-radius: $border-radius;
+  box-shadow: $Ohmyfood-shadow-1;
+  font-size: $Ohmyfood-fs-1;
+  padding: $padding;
+  margin: 0 auto;
 }
 
-/* box-shadow */
-@mixin shadow-ok{
-    box-shadow: 0px 5px 10px 0px $ombre;
-}
-@mixin shadow($colour:$ombre, $size:$pourcent){
-    box-shadow: 0px 5px 10px 0px lighten($colour, $size);
+@mixin button-hover {
+  opacity: 0.8;
+  transition: 0.3s;
+  box-shadow: $Ohmyfood-shadow-3;
 }

@@ -10,7 +10,7 @@
       href="images/logo/favico/ohmyfoodfavicon.png"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <script
       src="https://kit.fontawesome.com/85893a34ce.js"
       crossorigin="anonymous"
@@ -44,7 +44,9 @@
           <p class="hero__text">
             Découvrez des restaurants d'exception, sélectionnés par nos soins.
           </p>
-          <button class="hero__button">Explorer nos restaurants</button>
+          <button class="hero__button">
+            <p class="hero__button__text">Explorer nos restaurants</p>
+          </button>
         </div>
       </section>
       <!-- end of Hero  section-->
@@ -87,7 +89,7 @@
           <ul class="restaurant__menus">
             <li class="restaurant__menu">
               <a href="./menus/la_palette_du_gout/la_palette_du_gout.html">
-              <div class="restaurant__menu__image">
+                <div class="restaurant__menu__image">
                   <img src="./images/restaurants/restaurant1.jpg" alt="" />
                 </div>
                 <div class="restaurant__menu__description">
@@ -97,7 +99,7 @@
                   </div>
                   <div class="restaurant__menu__description__container">
                     <i
-                    class="fas fa-heart restaurant__menu__description__icon"
+                      class="fas fa-heart restaurant__menu__description__icon"
                     ></i>
                   </div>
                 </div>
@@ -105,41 +107,59 @@
             </li>
             <li class="restaurant__menu">
               <a href="./menus/la_française/a_la_française.html">
-              <div class="restaurant__menu__image">
-                <img src="./images/restaurants/restaurant2.jpg" alt="" />
-              </div>
-              <div class="restaurant__menu__description">
-                <div class="restaurant__menu__description__text">
-                  <h3>À la française</h3>
-                  <p>Cité Rouge</p>
+                <div class="restaurant__menu__image">
+                  <img src="./images/restaurants/restaurant2.jpg" alt="" />
                 </div>
-                <div class="restaurant__menu__description__container">
-                  <i
-                    class="fas fa-heart restaurant__menu__description__icon"
-                  ></i>
+                <div class="restaurant__menu__description">
+                  <div class="restaurant__menu__description__text">
+                    <h3>À la française</h3>
+                    <p>Cité Rouge</p>
+                  </div>
+                  <div class="restaurant__menu__description__container">
+                    <i
+                      class="fas fa-heart restaurant__menu__description__icon"
+                    ></i>
+                  </div>
                 </div>
-              </div>
-            </a>
+              </a>
             </li>
             <li class="restaurant__menu">
               <a href="./menus/le_delice_des_sens/le_delice_des_sens.html">
-              <div class="restaurant__menu__image">
-                <img src="./images/restaurants/restaurant3.jpg" alt="" />
-              </div>
-              <div class="restaurant__menu__description">
-                <div class="restaurant__menu__description__text">
-                  <h3>Le délice des sens</h3>
-                  <p>Folie-Méricourt</p>
+                <div class="restaurant__menu__image">
+                  <img src="./images/restaurants/restaurant3.jpg" alt="" />
                 </div>
-                <div class="restaurant__menu__description__container">
-                  <i
-                    class="fas fa-heart restaurant__menu__description__icon"
-                  ></i>
+                <div class="restaurant__menu__description">
+                  <div class="restaurant__menu__description__text">
+                    <h3>Le délice des sens</h3>
+                    <p>Folie-Méricourt</p>
+                  </div>
+                  <div class="restaurant__menu__description__container">
+                    <i
+                      class="fas fa-heart restaurant__menu__description__icon"
+                    ></i>
+                  </div>
                 </div>
-              </div>
-            </a>
+              </a>
             </li>
             <li class="restaurant__menu">
+              <a href="./menus/la_note_enchantee/la_note_enchantee.html">
+                <div class="restaurant__menu__image">
+                  <img src="./images/restaurants/restaurant1.jpg" alt="" />
+                </div>
+                <div class="restaurant__menu__description">
+                  <div class="restaurant__menu__description__text">
+                    <h3>La note enchantée</h3>
+                    <p>Charonne</p>
+                  </div>
+                  <div class="restaurant__menu__description__container">
+                    <i
+                      class="fas fa-heart restaurant__menu__description__icon"
+                    ></i>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <!-- <li class="restaurant__menu">
               <a href="./menus/la_note_enchantee/la_note_enchantee.html">
               <div class="restaurant__menu__image">
                 <img src="./images/restaurants/restaurant1.jpg" alt="" />
@@ -155,7 +175,7 @@
                   ></i>
                 </div>
               </div>
-            </li>
+            </li> -->
           </ul>
         </div>
       </section>
@@ -166,7 +186,11 @@
       <div class="footer">
         <div class="footer__logo">
           <a href="index.html">
-            <img src="./images/logo/ohmyfood@2x.svg" alt="" class="footer__logo_image" />
+            <img
+              src="./images/logo/ohmyfood@2x.svg"
+              alt=""
+              class="footer__logo_image"
+            />
           </a>
         </div>
         <ul class="footer__links">
@@ -175,9 +199,7 @@
               <span>
                 <i class="fa-solid fa-utensils"></i>
               </span>
-              <p>
-                Proposer un restaurant
-              </p>
+              <p>Proposer un restaurant</p>
             </a>
           </li>
           <li class="footer__link">
@@ -185,9 +207,7 @@
               <span>
                 <i class="fa-solid fa-handshake-angle"></i>
               </span>
-              <p>
-                Devenir partenaire
-              </p>
+              <p>Devenir partenaire</p>
             </a>
           </li>
           <li class="footer__link">
@@ -198,7 +218,6 @@
           </li>
         </ul>
       </div>
-    </div>
     </footer>
   </body>
 </html>
