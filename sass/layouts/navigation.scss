@@ -4,6 +4,7 @@
 
 main {
   width: 37.5rem;
+  background: $Ohmyfood-primary-grey;
 
   /*----------loaction-section---------*/
   .location {
@@ -71,6 +72,9 @@ main {
         position: relative;
         width: 32.5rem;
         height: 7.6rem;
+        &:hover {
+          @include hover();
+        }
         @include flexbox-center();
         // background: #99e2d0;
         @include button(10px, $Ohmyfood-primary-grey, 20px);
@@ -103,9 +107,9 @@ main {
 
   /*----------constrol-section---------*/
   .restaurant__container {
-    height: 1121px;
+    height: 1186px;
     // background: #99e2d0;
-    margin-bottom: 65px;
+    // margin-bottom: 65px;
 
     .restaurant {
       &__title {
@@ -127,6 +131,9 @@ main {
         background: $Ohmyfood-white;
         border-radius: 20px;
         box-shadow: $Ohmyfood-shadow-1;
+        &:hover {
+          @include hover();
+        }
         &__image {
           img {
             height: 178px;
@@ -242,6 +249,7 @@ main {
 
           &:hover {
             transition: 0.5s ease;
+            @include button-hover();
           }
           &:hover &__one {
             transition: 0.5s ease;

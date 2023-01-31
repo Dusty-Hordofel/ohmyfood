@@ -60,6 +60,15 @@ input {
 }
 
 /************************************/
+/* REUSED STYLE */
+/************************************/
+.section-center {
+  width: 90vw;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/************************************/
 /* KEYFRAMES*/
 /************************************/
 @keyframes bounce-slide {
@@ -237,6 +246,7 @@ header {
 /************************************/
 main {
   width: 37.5rem;
+  background: #f7f7f7;
   /*----------loaction-section---------*/
   /*----------hero-section---------*/
   /*----------functionning-section---------*/
@@ -317,6 +327,10 @@ main .functioning__container .functioning__button {
   padding: 10px;
   margin: 0 auto;
 }
+main .functioning__container .functioning__button:hover {
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
 main .functioning__container .functioning__button:not(:nth-last-child(1)) {
   margin-bottom: 22px;
 }
@@ -341,8 +355,7 @@ main .functioning__container .functioning__button__text {
   color: #000000;
 }
 main .restaurant__container {
-  height: 1121px;
-  margin-bottom: 65px;
+  height: 1186px;
 }
 main .restaurant__container .restaurant__title {
   margin-left: 25px;
@@ -361,6 +374,10 @@ main .restaurant__container .restaurant__menu {
   background: #ffffff;
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+main .restaurant__container .restaurant__menu:hover {
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 main .restaurant__container .restaurant__menu__image img {
   height: 178px;
@@ -462,6 +479,9 @@ main .restaurant__container .restaurant__menu__description {
 }
 .main__receipe__entries__receipes__links__link:hover {
   transition: 0.5s ease;
+  opacity: 0.8;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 .main__receipe__entries__receipes__links__link:hover .main__receipe__entries__receipes__links__link__one {
   transition: 0.5s ease;

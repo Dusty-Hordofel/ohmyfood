@@ -20,3 +20,13 @@
   transition: 0.3s;
   box-shadow: $Ohmyfood-shadow-3;
 }
+@mixin hover {
+  // opacity: 0.8;
+  transition: 0.3s;
+  box-shadow: $Ohmyfood-shadow-3;
+}
+@mixin section-center {
+  width: 90vw;
+  // max-width: var(--max-width);
+  margin: 0 auto;
+}
