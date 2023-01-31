@@ -102,48 +102,67 @@ input {
     transform: rotate(360deg);
   }
 }
-@keyframes stroke-animation {
+@keyframes receipe-opacity {
   0% {
-    stroke-dashoffset: 0;
-  }
-  30% {
-    stroke-dashoffset: 1550;
-  }
-  60% {
-    stroke-dashoffset: 3100;
-    fill: transparent;
-    transform: scale(1);
-  }
-  80% {
-    fill: pink;
-    transform: scale(1.1);
-  }
-  90% {
-    transform: scale(1);
-  }
-  100% {
-    stroke-dashoffset: 3100;
-    fill: pink;
-  }
-}
-@keyframes fade-animation {
-  70% {
-    fill: transparent;
-    transform: scale(1);
-  }
-  80% {
-    fill: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: scale(2.5);
     opacity: 0;
   }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
 }
+.show-receipe-with-opacity {
+  animation: receipe-opacity 1s both;
+}
+
+#case-1 {
+  animation-delay: 0.1s;
+}
+
+#case-2 {
+  animation-delay: 0.2s;
+}
+
+#case-3 {
+  animation-delay: 0.3s;
+}
+
+#case-4 {
+  animation-delay: 0.4s;
+}
+
+#case-5 {
+  animation-delay: 0.5s;
+}
+
+#case-6 {
+  animation-delay: 0.6s;
+}
+
+#case-7 {
+  animation-delay: 0.7s;
+}
+
+#case-8 {
+  animation-delay: 0.8s;
+}
+
+#case-9 {
+  animation-delay: 0.9s;
+}
+
+#case-10 {
+  animation-delay: 1s;
+}
+
 /************************************/
 /* HEADER */
 /************************************/
@@ -159,14 +178,12 @@ header {
 
 /******************restaurant Header ******************/
 .restaurant__header {
-  background: #9356dc;
   max-width: 37.5rem;
 }
 .restaurant__header .header {
   width: 37.5rem;
   height: 6.4rem;
   box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
-  background: #99e2d0;
 }
 .restaurant__header .header__icon {
   font-size: 2rem;
@@ -175,7 +192,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background: #9356dc;
   height: 100%;
 }
 .restaurant__header .header__logo {
@@ -527,6 +543,11 @@ main .restaurant__container .restaurant__menu__description {
   margin: 0 auto;
   width: 186px;
   margin-bottom: 4.2rem;
+}
+.main__receipe .receipes_command:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
 /************************************/

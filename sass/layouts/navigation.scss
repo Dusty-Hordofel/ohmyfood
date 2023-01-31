@@ -215,25 +215,16 @@ main {
             width: 4rem;
             height: 0.3rem;
             border-radius: 20px;
-            // width: 0;
-            // height: 0.2rem;
+
             left: 0;
             top: 2.8rem;
           }
-
-          //   &:hover:after {
-          //     width: 4rem;
-          //     height: 0.3rem;
-          //     border-radius: 20px;
-          //     transition: $transition;
-          //   }
         }
       }
 
       &__links {
         display: grid;
         grid-template-columns: 1fr;
-        // background: yellow;
         max-width: 35rem;
         margin: 0 1rem;
         gap: 1rem;
@@ -351,5 +342,9 @@ main {
     @include button(20px, $gradient, 50px);
     width: 186px;
     margin-bottom: 4.2rem;
+
+    &:hover {
+      @include button-hover();
+    }
   }
 }

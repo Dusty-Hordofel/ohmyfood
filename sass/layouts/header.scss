@@ -13,14 +13,12 @@ header {
 /******************restaurant Header ******************/
 
 .restaurant__header {
-  background: #9356dc;
   max-width: 37.5rem;
 
   .header {
     width: 37.5rem;
     height: 6.4rem;
     box-shadow: $Ohmyfood-shadow-2;
-    background: #99e2d0;
 
     &__icon {
       font-size: 2rem;
@@ -30,7 +28,6 @@ header {
       display: flex;
       align-items: center;
       justify-content: space-around;
-      background: #9356dc;
       height: 100%;
     }
 

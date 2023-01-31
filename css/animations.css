@@ -1,7 +1,6 @@
 /************************************/
 /* KEYFRAMES*/
 /************************************/
-
 @keyframes bounce-slide {
   0% {
     -webkit-transform: translateX(0);
@@ -34,7 +33,6 @@
     width: 57px;
   }
 }
-
 @keyframes rotate {
   0% {
     transform: rotate(0);
@@ -43,20 +41,16 @@
     transform: rotate(360deg);
   }
 }
-
 @keyframes receipe-opacity {
   0% {
     opacity: 0;
   }
-
   25% {
     opacity: 0.25;
   }
-
   50% {
     opacity: 0.5;
   }
-
   75% {
     opacity: 0.75;
   }
@@ -64,7 +58,6 @@
     opacity: 1;
   }
 }
-
 .show-receipe-with-opacity {
   animation: receipe-opacity 1s both;
 }
@@ -104,6 +97,7 @@
 #case-9 {
   animation-delay: 0.9s;
 }
+
 #case-10 {
   animation-delay: 1s;
-}
+}/*# sourceMappingURL=animations.css.map */
