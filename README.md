@@ -884,7 +884,11 @@ header {
 }
 ```
 
-### 17.
+## Section 10. tablet and desktop mediaqueries
+
+### 17. add tablet and desktop responsive attributes
+
+- add [tablet mediaqueries](./sass/layouts/navigation.scss)
 
 ### 18.
 
@@ -893,8 +897,6 @@ header {
 ### 20.
 
 ---
-
-## Section 10.
 
 ## Section 11.
 
