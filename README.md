@@ -886,19 +886,19 @@ header {
 
 ## Section 10. tablet and desktop mediaqueries
 
-### 17. add tablet and desktop responsive attributes
+### 17. Home Page tablet and desktop responsive attributes
 
 - add [tablet mediaqueries](./sass/layouts/navigation.scss)
 
-### 18.
+### 18. Restaurant tablet and desktop responsive attributes
+
+- add [restaurants mediaqueries](./sass/layouts/navigation.scss)
 
 ### 19.
 
 ### 20.
 
 ---
-
-## Section 11.
 
 ## Section 12.
 
