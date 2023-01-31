@@ -812,7 +812,77 @@ header {
 }
 ```
 
-### 16.
+## Section 9. Menu animation
+
+### 16.Receipes animation
+
+- add animation to receipes
+
+```scss
+@keyframes receipe-opacity {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.show-receipe-with-opacity {
+  animation: receipe-opacity 1s both;
+}
+
+#case-1 {
+  animation-delay: 0.1s;
+}
+
+#case-2 {
+  animation-delay: 0.2s;
+}
+
+#case-3 {
+  animation-delay: 0.3s;
+}
+
+#case-4 {
+  animation-delay: 0.4s;
+}
+
+#case-5 {
+  animation-delay: 0.5s;
+}
+
+#case-6 {
+  animation-delay: 0.6s;
+}
+
+#case-7 {
+  animation-delay: 0.7s;
+}
+
+#case-8 {
+  animation-delay: 0.8s;
+}
+
+#case-9 {
+  animation-delay: 0.9s;
+}
+#case-10 {
+  animation-delay: 1s;
+}
+```
 
 ### 17.
 
@@ -823,8 +893,6 @@ header {
 ### 20.
 
 ---
-
-## Section 9.
 
 ## Section 10.
 
