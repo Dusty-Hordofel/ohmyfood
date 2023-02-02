@@ -4,20 +4,35 @@
 
 footer {
   max-width: 37.5rem;
-  height: 19.8rem;
+  height: auto;
   background: #353535;
   color: $Ohmyfood-white;
 
   .footer {
     padding: 31px 0px 31px 31px;
     height: 100%;
+    transition: $transition;
+    @media (min-width: 800px) {
+      padding: 31px 0px 31px 0px;
+    }
+
     &__logo {
       margin-bottom: 25px;
-      width: 100px;
+      transition: $transition;
+
+      @media (min-width: 800px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       img {
-        width: 100px;
+        width: 150px;
         filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
           brightness(102%) contrast(102%);
+        @media (min-width: 800px) {
+          width: 200px;
+        }
       }
     }
 
@@ -26,6 +41,12 @@ footer {
       flex-direction: column;
       gap: 5px;
       height: 100%;
+      transition: $transition;
+
+      @media (min-width: 800px) {
+        flex-direction: row;
+        justify-content: space-around;
+      }
     }
 
     &__link {

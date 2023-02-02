@@ -1,9 +1,7 @@
 /************************************/
 /* KEYFRAMES*/
 /************************************/
-
 /***************** receipes animation *******************/
-
 @keyframes bounce-slide {
   0% {
     -webkit-transform: translateX(0);
@@ -36,7 +34,6 @@
     width: 57px;
   }
 }
-
 @keyframes rotate {
   0% {
     transform: rotate(0);
@@ -45,21 +42,17 @@
     transform: rotate(360deg);
   }
 }
-
 /***************** receipes opacity  *******************/
 @keyframes receipe-opacity {
   0% {
     opacity: 0;
   }
-
   25% {
     opacity: 0.25;
   }
-
   50% {
     opacity: 0.5;
   }
-
   75% {
     opacity: 0.75;
   }
@@ -67,7 +60,6 @@
     opacity: 1;
   }
 }
-
 .show-receipe-with-opacity {
   animation: receipe-opacity 1s both;
 }
@@ -107,6 +99,7 @@
 #case-9 {
   animation-delay: 0.9s;
 }
+
 #case-10 {
   animation-delay: 1s;
 }
@@ -116,9 +109,7 @@
     transform: rotate(360deg);
   }
 }
-
 /***************** Animation Loading spinner  *******************/
-
 @keyframes spinner-container {
   0% {
     visibility: visible;
@@ -132,7 +123,6 @@
     visibility: hidden;
   }
 }
-
 @keyframes spinner-loader {
   0% {
     visibility: visible;
@@ -146,4 +136,4 @@
     opacity: 0;
     visibility: hidden;
   }
-}
+}/*# sourceMappingURL=animations.css.map */

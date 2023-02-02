@@ -2,11 +2,58 @@
 /* HOMEPAGE MAIN */
 /************************************/
 
+/***************** loader *******************/
+
+.loader__container {
+  background: #ffffffff;
+  height: 100vh;
+  @include flexbox-center();
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  animation: spinner-container 2s linear;
+  visibility: hidden;
+  .loader {
+    width: 150px;
+    height: 150px;
+    border-color: $primary-color $secondary-color $tertiary-color
+      $Ohmyfood-white;
+    border-radius: 50%;
+    box-shadow: $Ohmyfood-shadow-2;
+    animation: spinner-loader 2s linear;
+
+    &__circle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      border: 15px solid #162534;
+      border-radius: 50%;
+      border-color: $primary-color $secondary-color $tertiary-color;
+
+      &__logo {
+        width: 80px;
+      }
+
+      h1 {
+        color: $gradient;
+        font-family: "Shrikhand", cursive;
+        text-shadow: $Ohmyfood-shadow-2;
+        font-size: 20px;
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}
+
 main {
   width: 37.5rem;
   background: $Ohmyfood-primary-grey;
 
-  /*----------loaction-section---------*/
+  /***************** location *******************/
   .location {
     height: 4.9rem;
     background: $Ohmyfood-secondary-grey;
@@ -21,7 +68,7 @@ main {
     }
   }
 
-  /*----------hero-section---------*/
+  /***************** hero *******************/
   .hero__container {
     background: $Ohmyfood-primary-grey;
     padding-top: 42px;
@@ -51,7 +98,7 @@ main {
     }
   }
 
-  /*----------functionning-section---------*/
+  /***************** functionning *******************/
   .functioning__container {
     height: 37.1rem;
 
@@ -131,7 +178,8 @@ main {
     }
   }
 
-  /*----------constrol-section---------*/
+  /***************** restaurants *******************/
+
   .restaurant__container {
     height: 1186px;
     @media (min-width: 650px) {
@@ -202,26 +250,28 @@ main {
 /* RESTAURANT NAVIGATION*/
 /************************************/
 .receipe__image {
-  width: 37.5rem;
+  min-width: 37.5rem;
+  max-height: 30rem;
   background: #99e2d0;
 
-  &__image {
-    max-width: 100%;
-    height: 50rem;
+  &__background {
+    width: 100%;
+    max-height: 30rem;
+    object-fit: cover;
   }
 }
 .main__receipe__container {
   position: relative;
-  background: #000000;
 }
 .main__receipe {
-  position: absolute;
   top: -3.5rem;
-  width: 37.5rem;
+  position: relative;
+  min-width: 37.5rem;
   padding-top: 4.2rem;
   background: $Ohmyfood-primary-grey;
   border-radius: 40px 40px 0 0;
   z-index: 1;
+
   &__title {
     display: flex;
     justify-content: space-between;
@@ -244,8 +294,16 @@ main {
     font-size: 2rem;
   }
 
+  .main__receipe__entries__container {
+    @media (min-width: 1190px) {
+      display: flex;
+    }
+  }
   &__entries {
     padding-bottom: 4.5rem;
+    @media (min-width: 1100px) {
+      width: 100%;
+    }
     &__receipes {
       position: relative;
       &__title {
@@ -273,8 +331,6 @@ main {
       &__links {
         display: grid;
         grid-template-columns: 1fr;
-        width: 35rem;
-        // max-width: 35rem;
         margin: 0 1rem;
         gap: 1rem;
 
@@ -285,8 +341,6 @@ main {
           border-radius: 15px;
           height: 7.2rem;
           background: #f7f7f7;
-          width: 35rem;
-          // max-width: 35rem;
           transition: 0.5s ease;
           border-radius: 15px;
 
@@ -296,7 +350,6 @@ main {
           }
           &:hover &__one {
             transition: 0.5s ease;
-            // background: #ff79da;
             width: 83.7%;
           }
 
@@ -315,22 +368,17 @@ main {
 
           &:hover &__one__zole {
             transition: 0.5s ease;
-            // animation: price-slide 0.5s ease;
           }
 
           &__one {
-            // background: rgba(255, 121, 218, 1);
-            // border-radius: 15px 0px 0px 15px;
-            // border-radius: 15px 0px 0px 15px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 2rem;
-            // transition: $transition;
+
             width: 100%;
             height: 100%;
             &__mosi {
-              //   background: brown;
               white-space: nowrap;
               overflow: hidden;
 
@@ -348,17 +396,12 @@ main {
             }
 
             &__zole {
-              //   background: #99e2d0;
               font-weight: bold;
-              //   transition: 0.5s ease;
-              //   background: #9356dc;
               margin-left: 2rem;
-              //   height: 100%;
             }
           }
 
           &__tatu {
-            // margin-left: 20px;
             position: absolute;
             right: 0;
 
@@ -374,12 +417,10 @@ main {
               border-radius: 50%;
               padding: 1.25rem;
               @include flexbox-center();
-              //   display: none;
 
               i {
                 color: $tertiary-color;
                 font-size: 2.25rem;
-                // transform: rotate(180deg);
                 animation: rotate 0.5s ease-in-out;
               }
             }
@@ -392,7 +433,6 @@ main {
   .receipes_command {
     @include button(20px, $gradient, 50px);
     width: 186px;
-    margin-bottom: 4.2rem;
 
     &:hover {
       @include button-hover();
