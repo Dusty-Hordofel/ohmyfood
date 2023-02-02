@@ -966,7 +966,3 @@ header {
 - add [email link ](index.html) to the footer
 
 ---
-
-## Section 13.
-
-## Section 14.
