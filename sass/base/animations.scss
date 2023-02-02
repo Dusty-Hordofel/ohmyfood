@@ -2,6 +2,8 @@
 /* KEYFRAMES*/
 /************************************/
 
+/***************** receipes animation *******************/
+
 @keyframes bounce-slide {
   0% {
     -webkit-transform: translateX(0);
@@ -44,6 +46,7 @@
   }
 }
 
+/***************** receipes opacity  *******************/
 @keyframes receipe-opacity {
   0% {
     opacity: 0;
@@ -106,4 +109,41 @@
 }
 #case-10 {
   animation-delay: 1s;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/***************** Animation Loading spinner  *******************/
+
+@keyframes spinner-container {
+  0% {
+    visibility: visible;
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes spinner-loader {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+    visibility: hidden;
+  }
 }

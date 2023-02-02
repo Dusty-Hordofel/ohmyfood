@@ -884,21 +884,86 @@ header {
 }
 ```
 
-### 17.
+## Section 10. tablet and desktop mediaqueries
 
-### 18.
+### 17. Home Page tablet and desktop responsive attributes
 
-### 19.
+- add [tablet mediaqueries](./sass/layouts/navigation.scss)
+
+### 18. Restaurant tablet and desktop responsive attributes
+
+- add [restaurants mediaqueries](./sass/layouts/navigation.scss)
+
+## Section 12. Loader
+
+### 19. Home Page Loader
+
+- add [loader](./index.html)
+
+```html
+<!-- Loading spinner -->
+
+<div class="loader__container">
+  <div class="loader">
+    <div class="loader__circle">
+      <h1>Ohmyfood</h1>
+    </div>
+  </div>
+</div>
+```
+
+- add [loader](./sass/layouts/navigation.scss)
+
+```scss
+.loader__container {
+  background: #ffffffff;
+  height: 100vh;
+  @include flexbox-center();
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  animation: spinner-container 2s linear;
+  visibility: hidden;
+  .loader {
+    width: 150px;
+    height: 150px;
+    border-color: $primary-color $secondary-color $tertiary-color
+      $Ohmyfood-white;
+    border-radius: 50%;
+    box-shadow: $Ohmyfood-shadow-2;
+    animation: spinner-loader 2s linear;
+
+    &__circle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      border: 15px solid #162534;
+      border-radius: 50%;
+      border-color: $primary-color $secondary-color $tertiary-color;
+
+      &__logo {
+        width: 80px;
+      }
+
+      h1 {
+        color: $gradient;
+        font-family: "Shrikhand", cursive;
+        text-shadow: $Ohmyfood-shadow-2;
+        font-size: 20px;
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}
+```
 
 ### 20.
 
 ---
-
-## Section 10.
-
-## Section 11.
-
-## Section 12.
 
 ## Section 13.
 
