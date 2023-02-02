@@ -961,22 +961,12 @@ header {
 }
 ```
 
-### 20.
+### 20. Email
+
+- add [email link ](index.html) to the footer
 
 ---
 
 ## Section 13.
 
 ## Section 14.
-
-## Section 15.
-
-## Section 16.
-
-## Section 17.
-
-## Section 18.
-
-## Section 19.
-
-## Section 20.
