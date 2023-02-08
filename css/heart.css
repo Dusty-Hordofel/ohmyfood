@@ -1,0 +1,30 @@
+.restaurant__menu__description__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  stroke-width: 30;
+  stroke: black;
+  fill: white;
+  cursor: pointer;
+}
+.restaurant__menu__description__container .heart {
+  width: 30px;
+  stroke-width: 30;
+  stroke: black;
+  fill: white;
+  cursor: pointer;
+}
+.restaurant__menu__description__container .heart-full {
+  position: absolute;
+  fill: url(#text-fill);
+  stroke: none;
+}
+.restaurant__menu__description__container .heart-empty {
+  width: 30px;
+  position: relative;
+}
+.restaurant__menu__description__container .heart-empty:hover {
+  opacity: 0;
+  transition: 0.5s;
+}/*# sourceMappingURL=heart.css.map */
