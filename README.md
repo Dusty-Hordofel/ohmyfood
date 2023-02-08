@@ -966,3 +966,19 @@ header {
 - add [email link ](index.html) to the footer
 
 ---
+
+<!-- 
+.carte__lien--nouveau {
+  width: 80px;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  padding: 6px 0;
+  transform-origin: 10% 50%;
+  border-radius: 2px;
+  background-color: #99E2D0;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #278870;
+} -->
