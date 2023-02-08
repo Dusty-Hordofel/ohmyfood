@@ -277,10 +277,10 @@ header {
   transition: 0.5s;
 }
 
+/***************** HOME PAGE *******************/
 /************************************/
-/* HOMEPAGE MAIN */
+/* LOADER */
 /************************************/
-/***************** loader *******************/
 .loader__container {
   background: white;
   height: 100vh;
@@ -324,6 +324,9 @@ header {
   -webkit-text-fill-color: transparent;
 }
 
+/************************************/
+/* MAIN SECTION */
+/************************************/
 main {
   width: 37.5rem;
   background: #f7f7f7;
@@ -506,6 +509,7 @@ main .restaurant__container .restaurant__menu {
   background: #ffffff;
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 @media (min-width: 650px) {
   main .restaurant__container .restaurant__menu {
@@ -516,6 +520,20 @@ main .restaurant__container .restaurant__menu:hover {
   transition: 0.3s;
   transform: scale(1.02);
   box-shadow: 0px 0px 10px 2px rgba(147, 86, 220, 0.6);
+}
+main .restaurant__container .restaurant__menu__new {
+  width: 80px;
+  position: absolute;
+  right: 12px;
+  top: 14px;
+  padding: 6px 0;
+  transform-origin: 10% 50%;
+  border-radius: 2px;
+  background-color: #99e2d0;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #278870;
 }
 main .restaurant__container .restaurant__menu__image img {
   height: 178px;
@@ -529,6 +547,11 @@ main .restaurant__container .restaurant__menu__description {
   justify-content: space-between;
   padding: 20px;
   height: 75px;
+}
+main .restaurant__container .restaurant__menu__description span {
+  display: inline-block;
+  background: red;
+  position: absolute;
 }
 
 /************************************/

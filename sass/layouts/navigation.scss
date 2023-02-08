@@ -220,6 +220,7 @@ main {
         background: $Ohmyfood-white;
         border-radius: 20px;
         box-shadow: $Ohmyfood-shadow-1;
+        position: relative;
 
         @media (min-width: 650px) {
           width: 100%;
@@ -228,6 +229,22 @@ main {
         &:hover {
           @include hover();
         }
+
+        &__new {
+          width: 80px;
+          position: absolute;
+          right: 12px;
+          top: 14px;
+          padding: 6px 0;
+          transform-origin: 10% 50%;
+          border-radius: 2px;
+          background-color: #99e2d0;
+          text-align: center;
+          font-size: 1.4rem;
+          font-weight: 500;
+          color: #278870;
+        }
+
         &__image {
           img {
             height: 178px;
@@ -243,6 +260,13 @@ main {
           justify-content: space-between;
           padding: 20px;
           height: 75px;
+
+          span {
+            display: inline-block;
+            background: red;
+            // background: #162534;
+            position: absolute;
+          }
         }
       }
     }

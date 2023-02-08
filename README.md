@@ -961,8 +961,12 @@ header {
 }
 ```
 
+---
+
 ### 20. Email
 
 - add [email link ](index.html) to the footer
 
 ---
+
+### 21. add new badge
