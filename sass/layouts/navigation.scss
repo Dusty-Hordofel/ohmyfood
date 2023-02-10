@@ -35,7 +35,7 @@
         width: 80px;
       }
 
-      h1 {
+      p {
         color: $gradient;
         font-family: "Shrikhand", cursive;
         text-shadow: $Ohmyfood-shadow-2;
@@ -260,13 +260,6 @@ main {
           justify-content: space-between;
           padding: 20px;
           height: 75px;
-
-          // span {
-          //   display: inline-block;
-          //   background: red;
-          //   // background: #162534;
-          //   position: absolute;
-          // }
         }
       }
     }

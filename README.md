@@ -15,7 +15,7 @@
 
 Ohmyfood! is a young startup that would like to impose itself on the restaurant market. The objective is to develop a 100% mobile site that lists the menus of gourmet restaurants. In addition to the classic reservation systems, customers will be able to compose the menu of their meal so that the dishes are ready when they arrive. No more waiting in restaurants! This is my third project from the application developer course - javascript react offered by [OpenClassRooms](https://openclassrooms.com/fr/paths/516-developpeur-dapplication-javascript-react) . Practice makes improvement.
 
----
+![accueil](./images/maquette/Accueil.png)
 
 ## Section 1. Setup
 
@@ -970,3 +970,5 @@ header {
 ---
 
 ### 21. add new badge
+
+### 22. [html validator](https://validator.w3.org/nu/#file)
