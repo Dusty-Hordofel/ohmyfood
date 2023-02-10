@@ -5,7 +5,7 @@
 /******************Home Header ******************/
 header {
   @include flexbox-center();
-  min-width: 37.5rem;
+  min-width: 32rem;
   height: 6.4rem;
   box-shadow: $Ohmyfood-shadow-2;
 }
@@ -13,7 +13,7 @@ header {
 /******************restaurant Header ******************/
 
 .restaurant__header {
-  min-width: 37.5rem;
+  min-width: 32rem;
   box-shadow: $Ohmyfood-shadow-2;
 
   .header {

@@ -972,3 +972,5 @@ header {
 ### 21. add new badge
 
 ### 22. [html validator](https://validator.w3.org/nu/#file)
+
+### 23. change min-width of project
