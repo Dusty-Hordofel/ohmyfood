@@ -5,16 +5,21 @@
 /******************Home Header ******************/
 header {
   @include flexbox-center();
-  min-width: 37.5rem;
+  min-width: 32rem;
   height: 6.4rem;
   box-shadow: $Ohmyfood-shadow-2;
+  background: red;
 }
 
 /******************restaurant Header ******************/
 
+// .restaurant__header {
+//
+// }
 .restaurant__header {
-  min-width: 37.5rem;
-  box-shadow: $Ohmyfood-shadow-2;
+  // min-width: 32rem;
+  // box-shadow: $Ohmyfood-shadow-2;
+  background: yellow;
 
   .header {
     width: 100%;

@@ -3,7 +3,7 @@
 /************************************/
 
 footer {
-  max-width: 37.5rem;
+  min-width: 32rem;
   height: auto;
   background: #353535;
   color: $Ohmyfood-white;
@@ -11,6 +11,7 @@ footer {
   .footer {
     padding: 31px 0px 31px 31px;
     height: 100%;
+    min-width: 32rem;
     transition: $transition;
     @media (min-width: 800px) {
       padding: 31px 0px 31px 0px;

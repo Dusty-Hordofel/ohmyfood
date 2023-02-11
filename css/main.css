@@ -215,15 +215,15 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 37.5rem;
+  min-width: 32rem;
   height: 6.4rem;
   box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
+  background: red;
 }
 
 /******************restaurant Header ******************/
 .restaurant__header {
-  min-width: 37.5rem;
-  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
+  background: yellow;
 }
 .restaurant__header .header {
   width: 100%;
@@ -283,7 +283,7 @@ header {
 /************************************/
 .loader__container {
   background: white;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -314,16 +314,12 @@ header {
 .loader__container .loader__circle__logo {
   width: 80px;
 }
-.loader__container .loader__circle h1 {
+.loader__container .loader__circle p {
   color: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
   font-family: "Shrikhand", cursive;
   text-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
   font-size: 20px;
-  background: linear-gradient(
-    180deg,
-    rgb(255, 121, 218) 0%,
-    rgb(147, 86, 220) 100%
-  );
+  background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -331,53 +327,59 @@ header {
 /************************************/
 /* MAIN SECTION */
 /************************************/
-main {
-  width: 37.5rem;
+main.home {
+  min-width: 32rem;
   background: #f7f7f7;
   /***************** location *******************/
   /***************** hero *******************/
   /***************** functionning *******************/
   /***************** restaurants *******************/
 }
-main .location {
+main.home .location {
   height: 4.9rem;
   background: #eaeaea;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-main .location__icon {
+main.home .location__icon {
   width: 1.2rem;
   height: 1.6rem;
 }
-main .location__city {
+main.home .location__city {
   margin-left: 1.9rem;
 }
-main .hero__container {
-  background: #f7f7f7;
+main.home .hero__container {
   padding-top: 42px;
   height: 29rem;
   display: flex;
   justify-content: center;
 }
-main .hero__container .hero {
-  width: 310px;
+main.home .hero__container .hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-main .hero__container .hero__title {
+main.home .hero__container .hero__title {
   margin-bottom: 23px;
-  margin: 0 20px 0 20px;
 }
-main .hero__container .hero__text {
-  margin: 23px 0 31px 0;
+main.home .hero__container .hero__title span {
+  display: flex;
+  justify-content: center;
 }
-main .hero__container .hero__button {
+main.home .hero__container .hero__text {
+  margin: 0 0 31px 0;
+}
+main.home .hero__container .hero__text span {
+  display: flex;
+  justify-content: center;
+}
+main.home .hero__container .hero__button {
   opacity: 1;
   color: white;
-  background: linear-gradient(
-    180deg,
-    rgb(255, 121, 218) 0%,
-    rgb(147, 86, 220) 100%
-  );
+  background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
   border-radius: 50px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   font-size: 1.6rem;
@@ -385,35 +387,35 @@ main .hero__container .hero__button {
   margin: 0 auto;
   width: 221px;
 }
-main .hero__container .hero__button:hover {
+main.home .hero__container .hero__button:hover {
   opacity: 0.8;
   transition: 0.3s;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
-main .functioning__container {
+main.home .functioning__container {
   height: 37.1rem;
 }
 @media (min-width: 979px) {
-  main .functioning__container {
+  main.home .functioning__container {
     height: 20rem;
   }
 }
-main .functioning__container .functioning__title {
+main.home .functioning__container .functioning__title {
   color: #000000;
   margin: 0px 0px 34px 25px;
 }
-main .functioning__container .functioning__buttons {
+main.home .functioning__container .functioning__buttons {
   display: grid;
   grid-template-columns: 1fr;
   transition: 0.3s ease-in-out;
 }
 @media (min-width: 979px) {
-  main .functioning__container .functioning__buttons {
+  main.home .functioning__container .functioning__buttons {
     grid-template-columns: repeat(3, 1fr);
     height: auto;
   }
 }
-main .functioning__container .functioning__button {
+main.home .functioning__container .functioning__button {
   position: relative;
   width: 27rem;
   height: 7.6rem;
@@ -430,27 +432,27 @@ main .functioning__container .functioning__button {
   margin: 0 auto;
 }
 @media (min-width: 1150px) {
-  main .functioning__container .functioning__button {
+  main.home .functioning__container .functioning__button {
     width: 29rem;
     transition: 0.3s ease-in-out;
   }
 }
 @media (min-width: 1180px) {
-  main .functioning__container .functioning__button {
+  main.home .functioning__container .functioning__button {
     grid-template-columns: repeat(3, 1fr);
     width: 32.5rem;
     transition: 0.3s ease-in-out;
   }
 }
-main .functioning__container .functioning__button:hover {
+main.home .functioning__container .functioning__button:hover {
   transition: 0.3s;
   transform: scale(1.02);
   box-shadow: 0px 0px 10px 2px rgba(147, 86, 220, 0.6);
 }
-main .functioning__container .functioning__button:not(:nth-last-child(1)) {
+main.home .functioning__container .functioning__button:not(:nth-last-child(1)) {
   margin-bottom: 22px;
 }
-main .functioning__container .functioning__button__number {
+main.home .functioning__container .functioning__button__number {
   position: absolute;
   left: -10px;
   background: #9356dc;
@@ -461,38 +463,38 @@ main .functioning__container .functioning__button__number {
   justify-content: center;
   align-items: center;
 }
-main .functioning__container .functioning__button__icon {
+main.home .functioning__container .functioning__button__icon {
   color: #9356dc;
 }
-main .functioning__container .functioning__button__text {
+main.home .functioning__container .functioning__button__text {
   margin-left: 1.3rem;
   display: inline-block;
   color: #000000;
   transition: 0.3s ease-in-out;
 }
 @media (min-width: 1100px) {
-  main .functioning__container .functioning__button__text {
+  main.home .functioning__container .functioning__button__text {
     margin-left: 2rem;
   }
 }
 @media (min-width: 1180px) {
-  main .functioning__container .functioning__button__text {
+  main.home .functioning__container .functioning__button__text {
     margin-left: 3.6rem;
   }
 }
-main .restaurant__container {
+main.home .restaurant__container {
   height: 1186px;
 }
 @media (min-width: 650px) {
-  main .restaurant__container {
+  main.home .restaurant__container {
     height: 65rem;
   }
 }
-main .restaurant__container .restaurant__title {
+main.home .restaurant__container .restaurant__title {
   margin-left: 25px;
   margin-bottom: 20px;
 }
-main .restaurant__container .restaurant__menus {
+main.home .restaurant__container .restaurant__menus {
   display: grid;
   justify-content: center;
   transition: 0.3s ease-in-out;
@@ -501,7 +503,7 @@ main .restaurant__container .restaurant__menus {
   gap: 20px;
 }
 @media (min-width: 650px) {
-  main .restaurant__container .restaurant__menus {
+  main.home .restaurant__container .restaurant__menus {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -511,7 +513,7 @@ main .restaurant__container .restaurant__menus {
     gap: 20px;
   }
 }
-main .restaurant__container .restaurant__menu {
+main.home .restaurant__container .restaurant__menu {
   width: 80vw;
   height: 253px;
   background: #ffffff;
@@ -520,16 +522,16 @@ main .restaurant__container .restaurant__menu {
   position: relative;
 }
 @media (min-width: 650px) {
-  main .restaurant__container .restaurant__menu {
+  main.home .restaurant__container .restaurant__menu {
     width: 100%;
   }
 }
-main .restaurant__container .restaurant__menu:hover {
+main.home .restaurant__container .restaurant__menu:hover {
   transition: 0.3s;
   transform: scale(1.02);
   box-shadow: 0px 0px 10px 2px rgba(147, 86, 220, 0.6);
 }
-main .restaurant__container .restaurant__menu__new {
+main.home .restaurant__container .restaurant__menu__new {
   width: 80px;
   position: absolute;
   right: 12px;
@@ -543,30 +545,25 @@ main .restaurant__container .restaurant__menu__new {
   font-weight: 500;
   color: #278870;
 }
-main .restaurant__container .restaurant__menu__image img {
+main.home .restaurant__container .restaurant__menu__image img {
   height: 178px;
   width: 100%;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
-main .restaurant__container .restaurant__menu__description {
+main.home .restaurant__container .restaurant__menu__description {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
   height: 75px;
 }
-main .restaurant__container .restaurant__menu__description span {
-  display: inline-block;
-  background: red;
-  position: absolute;
-}
 
 /************************************/
 /* RESTAURANT NAVIGATION*/
 /************************************/
 .receipe__image {
-  min-width: 37.5rem;
+  min-width: 32rem;
   max-height: 30rem;
   background: #99e2d0;
 }
@@ -578,12 +575,13 @@ main .restaurant__container .restaurant__menu__description span {
 
 .main__receipe__container {
   position: relative;
+  min-width: 32rem;
 }
 
 .main__receipe {
   top: -3.5rem;
   position: relative;
-  min-width: 37.5rem;
+  min-width: 32rem;
   padding-top: 4.2rem;
   background: #f7f7f7;
   border-radius: 40px 40px 0 0;
@@ -655,6 +653,8 @@ main .restaurant__container .restaurant__menu__description span {
   background: #f7f7f7;
   transition: 0.5s ease;
   border-radius: 15px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .main__receipe__entries__receipes__links__link:hover {
   transition: 0.5s ease;
@@ -662,13 +662,11 @@ main .restaurant__container .restaurant__menu__description span {
   transition: 0.3s;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
-.main__receipe__entries__receipes__links__link:hover
-  .main__receipe__entries__receipes__links__link__one {
+.main__receipe__entries__receipes__links__link:hover .main__receipe__entries__receipes__links__link__one {
   transition: 0.5s ease;
   width: 83.7%;
 }
-.main__receipe__entries__receipes__links__link:hover
-  .main__receipe__entries__receipes__links__link__tatu {
+.main__receipe__entries__receipes__links__link:hover .main__receipe__entries__receipes__links__link__tatu {
   animation: bounce-slide 0.5s cubic-bezier(0.58, 0, 1, 0.43);
   width: 5.7rem;
   height: 100%;
@@ -681,8 +679,7 @@ main .restaurant__container .restaurant__menu__description span {
   animation: slide-left 0.5s ease;
   transform-origin: right;
 }
-.main__receipe__entries__receipes__links__link:hover
-  .main__receipe__entries__receipes__links__link__one__zole {
+.main__receipe__entries__receipes__links__link:hover .main__receipe__entries__receipes__links__link__one__zole {
   transition: 0.5s ease;
 }
 .main__receipe__entries__receipes__links__link__one {
@@ -737,11 +734,7 @@ main .restaurant__container .restaurant__menu__description span {
 .main__receipe .receipes_command {
   opacity: 1;
   color: white;
-  background: linear-gradient(
-    180deg,
-    rgb(255, 121, 218) 0%,
-    rgb(147, 86, 220) 100%
-  );
+  background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
   border-radius: 50px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   font-size: 1.6rem;
@@ -759,7 +752,7 @@ main .restaurant__container .restaurant__menu__description span {
 /* FOOTER */
 /************************************/
 footer {
-  max-width: 37.5rem;
+  min-width: 32rem;
   height: auto;
   background: #353535;
   color: #ffffff;
@@ -767,6 +760,7 @@ footer {
 footer .footer {
   padding: 31px 0px 31px 31px;
   height: 100%;
+  min-width: 32rem;
   transition: all 0.3s linear;
 }
 @media (min-width: 800px) {
@@ -787,8 +781,7 @@ footer .footer__logo {
 }
 footer .footer__logo img {
   width: 150px;
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
-    brightness(102%) contrast(102%);
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
 @media (min-width: 800px) {
   footer .footer__logo img {
@@ -815,4 +808,4 @@ footer .footer__link__info {
 }
 footer .footer__link__info p {
   margin-left: 12px;
-} /*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
