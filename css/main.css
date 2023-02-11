@@ -554,6 +554,15 @@ main.home .restaurant__container .restaurant__menu__description {
   padding: 20px;
   height: 75px;
 }
+main.home .restaurant__container .restaurant__menu__description__text {
+  white-space: nowrap;
+  overflow: hidden;
+}
+main.home .restaurant__container .restaurant__menu__description__text h3,
+main.home .restaurant__container .restaurant__menu__description__text p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 
 /************************************/
 /* RESTAURANT NAVIGATION*/

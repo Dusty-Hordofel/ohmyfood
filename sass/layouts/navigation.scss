@@ -215,6 +215,8 @@ main.home {
         grid-column: 1fr;
         margin: 0 auto;
         gap: 20px;
+        // white-space: nowrap;
+        // overflow: hidden;
 
         @media (min-width: 650px) {
           display: grid;
@@ -234,6 +236,8 @@ main.home {
         border-radius: 20px;
         box-shadow: $Ohmyfood-shadow-1;
         position: relative;
+        // white-space: nowrap;
+        // overflow: hidden;
 
         @media (min-width: 650px) {
           width: 100%;
@@ -273,6 +277,15 @@ main.home {
           justify-content: space-between;
           padding: 20px;
           height: 75px;
+          &__text {
+            white-space: nowrap;
+            overflow: hidden;
+            h3,
+            p {
+              text-overflow: ellipsis;
+              overflow: hidden;
+            }
+          }
         }
       }
     }
