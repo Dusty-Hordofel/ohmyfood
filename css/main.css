@@ -761,6 +761,7 @@ footer {
   height: auto;
   background: #353535;
   color: #ffffff;
+  height: 100%;
 }
 footer .footer {
   padding: 31px 0px 31px 31px;
